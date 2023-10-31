@@ -1,0 +1,1971 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-size: 16px;
+  font-family: 'Gabriela', serif;
+  background:#ffb5ee;
+}
+
+/*
+#mensaje_exitoso{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#mensaje_exitoso div{
+  background: #e6e6e6;
+  width: 80%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top:300px;
+  border-radius:50px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+}
+
+#mensaje_exitoso div p{
+  font-family: Courgette;
+  font-size: 2em;
+  margin-top: -40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#mensaje_exitoso div a{
+  font-family: arial;
+  font-size: 1.2em;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  line-height: 40px;
+  transition-duration: 0.3s;
+}
+
+#mensaje_exitoso div a:hover{
+  color: #fff;
+}
+
+#mensaje_exitoso .button{
+  background: #0068f2;
+  width: 65%;
+  height: 40px;
+  position: absolute;
+  top: 70%;
+}
+*/
+
+
+#aviso_legal p{
+  text-align: justify;
+  margin: 0px 15px 25px 15px;
+}
+
+/*CONTENEDOR MENU EN PC*/
+#contenedor_menu{
+  display: none;
+}
+
+header #menu{
+  display: none;
+}
+
+#menu #sub-menu ul{
+  display: none;
+}
+
+/*MENU DESPLEGABLE*/
+#menu #sub-menu li
+{
+  width: 100%;
+  height: 70px;
+  margin-left: 1px;
+  background-color: #880094;
+  opacity: 0.95;
+  display: block;
+  position: relative;
+  top: 100px;
+  border-bottom: 2px solid;
+}
+
+#menu #sub-menu ul li a
+{
+  font-size: 24px;
+  line-height: 75px;
+}
+
+#menu #sub-menu:hover ul{
+  display: block;
+}
+
+#menu #sub-menu ul li:hover
+{
+  background-color: #798BD3;
+  transition: 0.5s;
+}
+
+/*CONTENEDOR MENU DE CELULAR*/
+#menucell{
+  position: fixed;
+  width: 80%;
+  height: 680px;
+  background-color: #6235AC;
+  left: 10%;
+  top:0px;
+  z-index: 30;
+}
+
+#iomenu{
+  position: absolute;
+  width: 100%;
+}
+
+header h1{
+  font-size: 45px;
+  text-align: center;
+  border-bottom: #fff 3px solid;
+  text-shadow: 3px 3px 3px #fff;
+  position: relative;
+  line-height: 70px;
+  top: -20px;
+  margin-bottom: 35px;
+}
+
+/*BOTONES ABRIR Y CERRAR MENU*/
+#showmenu{
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  bottom:40px;
+  right: 20px;
+  z-index: 999;
+  transition-duration: 0.4s;
+  
+}
+
+#showmenu:hover{
+  transform: rotate(145deg);
+}
+
+/*MENU MOVIL DISEÑO*/
+
+.iomenumovil img{
+  width:100%;
+  cursor: pointer;
+}
+
+#iomenu ul{
+  position: relative;
+  top:-55px;
+  width: 100%;
+}
+
+#iomenu ul li{
+  width: 100%;
+  height: auto;
+  list-style: none;
+  text-align: center;
+  position: relative;
+  transition-duration: 0.3s;
+}
+
+#iomenu ul li:hover{
+  background-color: #798BD3;
+}
+
+#iomenu ul li a{
+  display: block;
+  font-size: 2.2em;
+  width: 100%;
+  height: 118px;
+  text-decoration: none;
+  color: #000;
+  line-height:120px;
+  border-bottom:solid #fff;
+}
+
+#iomenu h1{
+  background-color: #9919A1;
+}
+
+
+/*SUBMENU DESPLEGABLE DESING*/
+#iomenu #sub-menu-movil ul{
+  width: 60%;
+  position: relative;
+  top:0px;
+  margin: 0 auto;
+  display: none;
+}
+
+#iomenu #sub-menu-movil{
+  background-color: transparent;
+}
+
+#iomenu #sub-menu-movil:hover ul{
+  display: block;
+}
+
+#iomenu #sub-menu-movil ul li{
+  background-color: #9919A1;
+}
+
+#iomenu #sub-menu-movil ul li:hover{
+  background-color: #798BD3;
+}
+
+
+
+
+/*LOGO PRINCIPAL*/
+#logo{
+  width: 100%;
+  height: auto;
+  position: relative;
+  top:30px;
+  margin-bottom: 70px;
+}
+
+#logo img{
+  width: 100%;
+  height: 100%;
+}
+
+/*CONTENEDOR SLIDER CON IMAGENES Y LOGO*/
+div.cont_slide{
+  width: 100%;
+  height: 680px;
+  margin: auto;
+  overflow:hidden;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  box-shadow: 0px 0px 8px #000;
+  background: #47ccfe;
+}
+
+/*LISTA*/
+div.cont_slide ul{
+  display: flex;
+  width: 600%;
+  animation: 25s cambio infinite;
+  animation-direction: alternate;
+}
+
+div.cont_slide ul li{
+  list-style: none;
+  width: 100%;
+  height: 680px;
+}
+
+div.cont_slide ul li img{
+  width: 100%;
+  height: 100%;
+}
+
+
+@keyframes cambio {
+  0%{margin-left: 0;}
+  22%{margin-left: 0;}
+
+  24%{margin-left: -100%;}
+  40%{margin-left: -100%;}
+
+  42%{margin-left: -200%;}
+  50%{margin-left:-200%;}
+
+  52%{margin-left: -300%;}
+  70%{margin-left: -300%;}
+
+  72%{margin-left: -400%;}
+  90%{margin-left: -400%;}
+
+  92%{margin-left: -500%;}
+  100%{margin-left: -500%;}
+}
+
+
+/*CONTENEDOR PRINCIPAL DE LOS SLIDER*/
+#slider{
+  width: 100%;
+  height: 2000px;
+  position: relative;
+  top: 160px;
+}
+
+/*CLASE DEL SLIDER HOME*/
+.slide{
+  width: 100%;
+  height: 87%;
+  font-family: 'Courgette', cursive;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/*ID CONTENEDOR DE LA INFORMACION PERSONAL*/
+#home h3{
+  font-size: 3.5em;
+}
+
+#home p{
+  font-size: 2em;
+  margin: 50px 30px 0px 30px;
+}
+
+/*CONTENEDOR IMAGEN LUISA Y JEISON*/
+#home figure{
+  width: 280px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  top: 20px;
+  margin: 0px auto;
+  box-shadow: 2px 2px 3px #000;
+}
+
+/*IMAGEN LUISA*/
+#home>figure>img{
+  width: 105%;
+  height: 370px;
+  position: relative;
+  top: -10px;
+  left: -10px;
+}
+
+/*CONTENEDOR IMAGEN JEISON*/
+#home1{
+  width: 100%;
+  height: 380px;
+  position: relative;
+  top: 100px;
+}
+
+
+/*IMAGEN JEISON*/
+#home1>figure>img{
+  width: 105%;
+  height: 370px;
+  position: relative;
+  top: -10px;
+  left: -10px;
+}
+
+/*CLASE DEL SLIDER NOSOTROS*/
+.slide1{
+  width: 100%;
+  height: 80%;
+  background:#6bb0f9;
+  position: relative;
+  top: -180px;
+  padding-top:20px;
+}
+
+#nosotros>h4{
+  text-align: center;
+  font-size: 4em;
+  font-weight:lighter;
+  margin-bottom: 80px;
+  font-family: 'Gabriela', serif;
+}
+
+#nosotros>p{
+  text-align: center;
+  font-size: 2em;
+  margin: 0px 30px 55px 30px;
+  font-family: 'Courgette', cursive;
+  font-weight: normal;
+}
+
+/*CONTENEDOR PRINCIPAL DE LOS SERVICIOS PARA MOVIL*/
+.slide2{
+  width: 100%;
+  height: auto;
+  position: relative;
+  top:-180px;
+}
+
+/*TITULO SERVICIOS*/
+  #servicios>h4{
+  text-align: center;
+  font-size: 3.8em;
+  font-weight: lighter;
+  margin-bottom: 120px;
+}
+
+/*CONTENEDOR SECUNDARIO DE LOS SERVICIOS*/
+div.contenedor{
+  width: 100%;
+  height: 90%;
+  transition-duration:0.3s;
+}
+
+/*SUBCONTENEDOR DE LOS SERVICIOS*/
+.contenedor .sub-contenedor1,.sub-contenedor2,
+.sub-contenedor3,.sub-contenedor4,
+.sub-contenedor5,.sub-contenedor6,
+.sub-contenedor7,.sub-contenedor8{
+  width: 100%;
+  height: 0px;
+  background:#73a7fe;
+  overflow: hidden;
+  transition-duration: 0.4s;
+}
+
+
+/*CONTENEDOR DEL TITULO DE LOS SERVICIOS*/
+div.titulo1,.titulo2,.titulo3,.titulo4,
+.titulo5,.titulo6,.titulo7,.titulo8{
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #424241;
+}
+
+/*PROPIEDADES GENERALES A LOS TITULOS DE LOS SERVICIOS*/
+div h3{
+  font-size: 2em;
+  margin-top: 12px;
+  font-weight: lighter;
+}
+
+/*PROPIEDADES GENERALES A LOS ICONOS DENTRO DE LOS H3*/
+div.contenedor i{
+  float: right;
+  font-size: 1.8em;
+  margin-top: -12px;
+}
+
+/*PROPIEDADES DE LAS IMAGENES GENERALES*/
+.contenido figure{
+  width: 55%;
+  height: 450px;
+  float: left;
+  margin-right: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.contenido figure img{
+  width: 100%;
+  height: 100%;
+}
+
+/*PROPIEDADES DE LOS PARRAFOS GENERALES DENTRO DE LOS SERVICIOS*/
+div.contenido p{
+  font-size: 1.6em;
+  font-family: Courgette;
+  margin-bottom: 15px;
+  line-height: 35px;
+}
+
+/*ANIMACION DE HOVER PARA DESPLEGAR LA INFORMACION
+MEDIANTE EL TITULO MOSTRANDO EL SUB-CONTENEDOR*/
+div.contenedor .titulo1:hover ~ .sub-contenedor1{
+  height: 450px;
+}
+
+div.sub-contenedor1:hover{
+  height: 450px;
+}
+
+div.contenedor .titulo2:hover ~ .sub-contenedor2{
+  height: 450px;
+}
+
+div.sub-contenedor2:hover{
+  height: 450px;
+}
+
+div.contenedor .titulo3:hover ~ .sub-contenedor3{
+  height: 450px;
+}
+
+div.sub-contenedor3:hover{
+  height: 450px;
+}
+
+div.contenedor .titulo4:hover ~ .sub-contenedor4{
+  height: 450px;
+}
+
+div.sub-contenedor4:hover{
+  height: 450px;
+}
+
+div.contenedor .titulo5:hover ~ .sub-contenedor5{
+  height: 450px;
+}
+
+div.sub-contenedor5:hover{
+  height: 450px;
+}
+
+div.contenedor .titulo6:hover ~ .sub-contenedor6{
+  height: 450px;
+}
+
+div.sub-contenedor6:hover{
+  height: 450px;
+}
+
+div.contenedor .titulo7:hover ~ .sub-contenedor7{
+  height: 450px;
+}
+
+div.sub-contenedor7:hover{
+  height: 450px;
+}
+
+div.contenedor .titulo8:hover ~ .sub-contenedor8{
+  height: 450px;
+}
+
+div.sub-contenedor8:hover{
+  height: 450px;
+}
+
+/*ID CONTENEDOR PRINCIPAL DE LOS SERVICIOS PARA ESCRITORIO
+DENTRO DE CONTENEDOR FULL*/
+#contenedor_esc{
+  width: 100%;
+  height: 660px;
+  display: none;
+  margin-left: 3px;
+}
+
+/*CLASE CONTENEDORA DE CADA SERVICIO CON IMAGEN Y TEXTOS*/
+#contenedor_esc .contenido_esc{
+  width: 24.5%;
+  height: 325px;
+  margin-top: -3px;
+  margin-left: -3.9px;
+  display: inline-block;
+  overflow: hidden;
+  border: 2.3px solid #fff;
+  background: rgba(88, 195, 255, 0.8);
+}
+
+/*FIGURE DE LAS IMAGENES*/
+#contenedor_esc .contenido_esc figure{
+  width: 100%;
+  height: 325px;
+  transition-duration: 0.3s;
+}
+
+#contenedor_esc .contenido_esc figure img{
+  width: 100%;
+  height: 100%;
+}
+
+/*PARRAFOS DE INFORMACION*/
+#contenedor_esc .contenido_esc p{
+  font-size: 1.3em;
+  font-family: Courgette;
+  text-align: center;
+  color: #000;
+  margin-top: -325px;
+  margin-left: 4%;
+  margin-right: 4%;
+  transition-duration:0.3s;
+  line-height: 25px;
+  display: none;
+}
+
+/*CLASE CONTENEDORA DE LOS TITULOS*/
+#contenedor_esc .contenedor_h3{
+  width: 100%;
+  height: 75px;
+  position: relative;
+  top:-340px;
+  overflow: hidden;
+  transition-duration:0.3s;
+  opacity: 0;
+}
+
+.fondo {
+  background: #e8e8e8;
+}
+
+.fondo1{
+  background: #d72d00;
+}
+
+.fondo2{
+  background: rgba(244, 174, 83, 0.8);
+}
+
+.fondo3{
+  background: #9f46aa;
+}
+
+.fondo4{
+  background: #fff;
+}
+
+.fondo5{
+  background: rgba(207, 207, 207, 0.85);
+}
+
+.fondo6{
+  background: #c4f6ff;
+}
+
+.fondo7{
+  background: rgba(0, 140, 255, 0.6);
+}
+
+#contenedor_esc .contenedor_h3 h3{
+  font-size: 1.5em;
+  text-align: center;
+  margin-top:30px;
+}
+
+/*ANIMACION APLICADA AL CONTENEDOR DE LOS TITULOS DESDE EL FIGURE*/
+#contenedor_esc .contenido_esc figure:hover ~ div.contenedor_h3{
+  opacity: 1;
+}
+
+/*ANIMACION APLICADA A LOS PARRAFOS DESDE EL FIGURE*/
+#contenedor_esc .contenido_esc figure:hover ~ p{
+  display: block;
+}
+
+/*ANIMACION DEL FIGURE*/
+.contenido_esc figure:hover{
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+/*CONTENEDOR HABILIDADES FULL*/
+.slide3{
+  width: 100%;
+  height: 2200px;
+  background:#6bb0f9;
+  position: relative;
+  top:-180px;
+}
+
+/*TITULO DE HABILIDADES*/
+.slide3 h4{
+  font-size: 3.5em;
+  text-align: center;
+  font-weight: lighter;
+}
+
+/*CONTENEDOR DE HABILIDADES DENTRO DE HABILIDADES FULL*/
+.habilidades{
+  width: 100%;
+  height: 2000px;
+  margin-top:60px;
+}
+
+/*SUBCONTENEDORES DENTRO DE HABILIDADES CON LOS PORCENTAJES*/
+.habilidades>div{
+  position: relative;
+}
+
+/*CIRCULO CON PORCENTAJES*/
+.circular-progress-bar{
+  position:relative;
+  margin:0 auto;
+  transform: rotate(-90deg);
+}
+
+/*PROPIEDADES PARA LOS TEXTOS DENTRO DE LOS CIRCULOS*/
+.progress-percentage, .progress-text, .habilidades>div>h6{
+  position:absolute;
+  width:100%;
+  top:50%;
+  left:57%;
+  transform: translate(-50%,-50%) rotate(90deg);
+  text-align:center;
+  padding:0px 20px;
+  color: #000;
+  font-size:65px;
+  font-weight: lighter;
+}
+
+/*PROGRESION JUNTO A LA BARRA, "SE ELIMINA"*/
+.progress-percentage {
+  display: none;
+}
+
+/*TITULO DENTRO DE LOS PORCENTAJES*/
+.progress-text {
+  left:42%;
+  color:#000;
+  font-size:28px;
+}
+
+/*SLIDE PRINCIPAL DE INFORMACION ADICIONAL*/
+.slide4{
+  width: 100%;
+  height: 2600px;
+  position: relative;
+  top: 100px;
+  font-family: Courgette;
+}
+
+/*SUBCONTENEDOR DIVIDIDO EN 2 DIVS*/
+.slide4 div{
+  width: 100%;
+  height: 50%;
+  display: inline-block;
+  text-align: center;
+  margin-bottom:20px;
+}
+
+/*PROPIEDADES ICONOS DENTRO DEL SLIDE4*/
+.slide4 div i{
+  font-size: 6.5em;
+  color: #0075ff;
+
+
+}
+
+.slide4 div .icon-printer{
+  animation: 1s parpadeo infinite;
+}
+
+.slide4 div .icon-gout{
+  animation: 1s parpadeo1 infinite;
+}
+
+.slide4 div .icon-camion{
+  animation: 1s parpadeo2 infinite;
+}
+
+.slide4 div .icon-cantidad{
+  animation: 1s parpadeo3 infinite;
+}
+
+/*ANIMACION DE LOS ICONOS EN INFORMACION ADICIONAL*/
+@keyframes parpadeo {
+  10%{
+    color: #00b2ff;
+  }
+
+  50%{
+    color: #000;
+  }
+}
+
+/*ANIMACION DE LOS ICONOS EN INFORMACION ADICIONAL*/
+@keyframes parpadeo1 {
+  20%{
+    color: #00b2ff;
+  }
+
+  90%{
+    color: #000;
+  }
+}
+
+/*ANIMACION DE LOS ICONOS EN INFORMACION ADICIONAL*/
+@keyframes parpadeo2 {
+  10%{
+    color: #00b2ff;
+  }
+
+  50%{
+    color: #000;
+  }
+}
+
+/*ANIMACION DE LOS ICONOS EN INFORMACION ADICIONAL*/
+@keyframes parpadeo3 {
+  20%{
+    color: #00b2ff;
+  }
+
+  90%{
+    color: #000;
+  }
+}
+
+
+/*PROPIEDADES DE LOS PARRAFOS*/
+.slide4 div p{
+  font-size: 1.7em;
+  margin: 30px 15px 80px 15px;
+}
+
+/*PROPIEDADES DEL FIGURE CONTENEDOR DE LAS IMAGENES*/
+.slide4 div figure{
+  width: 100%;
+  height: 635px;
+}
+
+/*PROPIEDADES DE LAS IMAGENES DENTRO DE LOS FIGURE*/
+.slide4 div figure img{
+  width: 100%;
+  height: 100%;
+}
+
+
+/*SLIDE DEL FORMULARIO DEL CUAL SUS HIJOS TOMAN EL LARGO*/
+.slide5{
+  width: 100%;
+  height: 400px;
+  position: relative;
+  top: 160px;
+}
+
+/*CONTENEDOR DEL FORMULARIO CON TITULO*/
+.slide5 #contact_form{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/*CONTENDOR DEL TITULO*/
+.slide5 #contact_form .contact{
+  background:#6bb0f9;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+}
+
+.slide5 #contact_form .contact p{
+  font-size: 3.5em;
+  line-height: 80px;
+  font-weight: lighter;
+}
+
+/*FORMULARIO DE CONTACTO*/
+.slide5 #contact_form form{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+/*CAMPOS PARA INGRESAR TEXTO*/
+.slide5 #contact_form form input{
+  width: 90%;
+  height: 40px;
+  margin:10px 0px;
+  border-radius: 5px;
+  border: none;
+}
+
+/*BOTON DE ENVIAR*/
+.slide5 #contact_form form #button{
+  font-size: 1.3em;
+  width: 60%;
+  height: 40px;
+  cursor: pointer;
+  animation: 2.5s salto infinite;
+
+}
+
+@keyframes salto {
+  0%,25%,75%{
+    background: #000;
+    color: #ffabf9;
+  }
+  50%,100%{
+    color: #000;
+    background: #fff;
+  }
+}
+
+/*AREA DE TEXTO PARA EL MENSAJE*/
+.slide5 #contact_form form textarea{
+  max-width: 90%;
+  max-height: 100px;
+  min-width: 90%;
+  min-height: 100px;
+  margin:10px 0px 30px 0px;
+  border-radius: 5px;
+  border: none;
+}
+
+
+/*SLIDE CONTENEDOR DEL MAPA*/
+.slide6{
+  width: 100%;
+  height: 500px;
+  position: relative;
+  top: 240px;
+}
+
+/*DIV CONTENEDOR DEL TITULO*/
+.slide6 div{
+  width: 100%;
+  height: 80px;
+  background: #6bb0f9;
+}
+
+/*PROPIEDADES PARA EL TITULO*/
+.slide6 div p{
+  text-align: center;
+  font-size: 3.5em;
+  font-weight: lighter;
+  line-height: 80px;
+}
+
+/*DIV CONTENEDOR DEL MAPA DENTRO DEL SLIDE*/
+.slide6 .map{
+  width: 100%;
+  height: 500px;
+}
+
+/*IFRAME CONTENEDOR DEL MAPA DENTRO DEL DIV Y SLIDE*/
+.slide6 .map iframe{
+  width: 100%;
+  height: 100%;
+}
+
+/*PIE DE PAGINA DE LA PAGINA PRINCIPAL*/
+footer{
+  width: 100%;
+  height: 140px;
+  position: relative;
+  top: 320px;
+  padding-top:5px;
+  overflow: hidden;
+}
+
+/*TITULO DEL FOOTER*/
+footer p{
+  font-family: arial;
+  text-align: center;
+  font-size: 1.2em;
+  color:#000;
+}
+
+/*CONTENEDOR DE LOS ICONOS*/
+footer .icons{
+  width: 300px;
+  height: auto;
+  margin: 0px auto;
+  position: relative;
+  top:20px;
+}
+
+/*PROPIEDADES PARA LOS ICONOS*/
+footer .icons i{
+  font-size: 2.4em;
+  margin:0px 27px;
+  display: inline-block;
+  transition-duration: 0.5s;
+  color:#000;
+}
+
+/*HOVER PARA LOS ICONOS*/
+footer .icons i:hover{
+  color: #6bb0f9;
+  transform: rotateY(360deg);
+}
+
+/*CONTENEDOR DE LOS AVISOS*/
+footer .avisos{
+  width: 160px;
+  height: auto;
+  margin: 0px auto;
+  position: relative;
+  bottom: -30px;
+}
+
+/*PROPIEDADES DE LOS LINKS*/
+footer .avisos a{
+  text-decoration: none;
+  color:#000;
+  font-size: 1em;
+  text-align: center;
+  display: block;
+  margin-bottom: 8px;
+  font-family: arial;
+  transition-duration:0.3s;
+}
+
+footer .avisos a:hover{
+  color: #88f4ff;
+}
+
+/*ID DEL PIE DE PAGINA PARA LA PAGINAD DE MENSAJE EXITOSO*/
+#footer{
+  width: 100%;
+  height: 140px;
+  background: #1385fa;
+  position: relative;
+  top: 504px;
+  padding-top:5px;
+  overflow: hidden;
+}
+
+/*TITULO DEL FOOTER*/
+#footer p{
+  color: #fff;
+  font-family: arial;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/*CONTENEDOR DE LOS ICONOS*/
+#footer .icons{
+  width: 300px;
+  height: auto;
+  margin: 0px auto;
+  position: relative;
+  top:20px;
+}
+
+/*PROPIEDADES PARA LOS ICONOS*/
+#footer .icons i{
+  color: #fff;
+  font-size: 2.4em;
+  margin:0px 27px;
+  display: inline-block;
+  transition-duration: 0.5s;
+}
+
+/*HOVER PARA LOS ICONOS*/
+#footer .icons i:hover{
+  color: #000;
+  transform: rotateY(360deg);
+}
+
+/*CONTENEDOR DE LOS AVISOS*/
+#footer .avisos{
+  width: 160px;
+  height: auto;
+  margin: 0px auto;
+  position: relative;
+  bottom: -30px;
+}
+
+/*PROPIEDADES DE LOS LINKS*/
+#footer .avisos a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+  display: block;
+  margin-bottom: 8px;
+  font-family: arial;
+  transition-duration:0.3s;
+}
+
+#footer .avisos a:hover{
+  color: #000;
+}
+
+@media screen and (min-width:480px) {
+}
+
+@media screen and (min-width:600px) {
+
+  #menucell{
+    height: 310px;
+  }
+
+  /*BOTONES ABRIR Y CERRAR MENU*/
+  #showmenu{
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    bottom:35px;
+    right: 20px;
+  }
+
+  header h1{
+    font-size: 30px;
+    line-height: 45px;
+    margin-bottom: 35px;
+  }
+
+  #iomenu ul li a{
+    font-size: 1.5em;
+    width: 100%;
+    height: 50px;
+    line-height:50px;
+  }
+
+  /*CONTENEDOR SLIDER CON IMAGENES Y LOGO*/
+  div.cont_slide{
+    height: 350px;
+  }
+
+  /*ALTURA DE LOS ELEMENTOS DENTRO DEL SLIDER MOVIL*/
+  div.cont_slide ul li{
+    height: 350px;
+  }
+
+  /*CONTENEDOR PRINCIPAL DE LOS SLIDER*/
+  #slider{
+    top: 30px;
+  }
+
+  /*CLASE DEL SLIDER HOME*/
+  .slide{
+    height: 65%;
+    margin-bottom: 0px;
+  }
+
+/*CONTENEDOR IMAGEN LUISA Y JEISON*/
+  #home figure{
+    width: 250px;
+    height: 250px;
+  }
+
+  #home p{
+    font-size: 1.9em;
+    margin: 60px 30px 0px 30px;
+  }
+
+  /*IMAGEN LUISA*/
+  #home>figure>img{
+    height: 340px;
+  }
+
+  /*CLASE DEL SLIDER NOSOTROS QUIENES SOMOS*/
+    .slide1{
+      height: 50%;
+      top: 0px;
+    }
+
+    #nosotros>h4{
+      font-size: 3.5em;
+    }
+
+    #nosotros>p{
+      font-size: 1.8em;
+      margin: 0px 25px 45px 25px;
+    }
+
+    /*CONTENEDOR PRINCIPAL DE LOS SERVICIOS PARA MOVIL*/
+    .slide2{
+      top: 0px;
+    }
+
+  /*PROPIEDADES GENERALES A LOS TITULOS DE LOS SERVICIOS*/
+  div h3{
+    font-size: 1.7em;
+    margin-top: 15px;
+  }
+
+  /*PROPIEDADES GENERALES A LOS ICONOS DENTRO DE LOS H3*/
+  div i{
+    font-size: 2em;
+    margin-top: -15px;
+  }
+
+  /*PROPIEDADES DE LOS PARRAFOS GENERALES DENTRO DE LOS SERVICIOS*/
+  div.contenido p{
+    font-size: 1.7em;
+    line-height: 40px;
+  }
+
+  /*PROPIEDADES DE LAS IMAGENES GENERALES*/
+  .contenido figure{
+    height: 380px;
+  }
+
+  .contenido figure img{
+    width: 100%;
+    height: 100%;
+  }
+
+  /*ANIMACION DE HOVER PARA DESPLEGAR LA INFORMACION
+  MEDIANTE EL TITULO MOSTRANDO EL SUB-CONTENEDOR*/
+  div.contenedor .titulo1:hover ~ .sub-contenedor1{
+    height: 380px;
+  }
+
+  div.sub-contenedor1:hover{
+    height: 380px;
+  }
+
+  div.contenedor .titulo2:hover ~ .sub-contenedor2{
+    height: 380px;
+  }
+
+  div.sub-contenedor2:hover{
+    height: 380px;
+  }
+
+  div.contenedor .titulo3:hover ~ .sub-contenedor3{
+    height: 380px;
+  }
+
+  div.sub-contenedor3:hover{
+    height: 380px;
+  }
+
+  div.contenedor .titulo4:hover ~ .sub-contenedor4{
+    height: 380px;
+  }
+
+  div.sub-contenedor4:hover{
+    height: 380px;
+  }
+
+  div.contenedor .titulo5:hover ~ .sub-contenedor5{
+    height: 380px;
+  }
+
+  div.sub-contenedor5:hover{
+    height: 380px;
+  }
+
+  div.contenedor .titulo6:hover ~ .sub-contenedor6{
+    height: 380px;
+  }
+
+  div.sub-contenedor6:hover{
+    height: 380px;
+  }
+
+  div.contenedor .titulo7:hover ~ .sub-contenedor7{
+    height: 380px;
+  }
+
+  div.sub-contenedor7:hover{
+    height: 380px;
+  }
+
+  div.contenedor .titulo8:hover ~ .sub-contenedor8{
+    height: 380px;
+  }
+
+  div.sub-contenedor8:hover{
+    height: 380px;
+  }
+
+  /*SLIDE CONTENEDOR DE HABILIDADES*/
+  .slide3{
+    top: 0px;
+  }
+
+  /*TITULO DE HABILIDADES*/
+  .slide3 h4{
+    font-size: 4em;
+  }
+
+  /*CONTENEDOR DE HABILIDADES DENTRO DE HABILIDADES FULL*/
+  .habilidades{
+    height: 2300px;
+    margin-top:90px;
+  }
+
+
+  /*SLIDE PRINCIPAL DE INFORMACION ADICIONAL*/
+  .slide4{
+    height: 1800px;
+    position: relative;
+    top: -65px;
+  }
+
+  /*SUBCONTENEDOR DIVIDIDO EN 2 DIVS*/
+  .slide4 div{
+    height: 50%;
+  }
+
+  /*PROPIEDADES ICONOS DENTRO DEL SLIDE4*/
+  .slide4 div i{
+    font-size: 6em;
+  }
+
+  /*PROPIEDADES DE LOS PARRAFOS*/
+  .slide4 div p{
+    font-size: 1.5em;
+    margin-bottom: 70px;
+  }
+
+  /*PROPIEDADES DEL FIGURE CONTENEDOR DE LAS IMAGENES*/
+  .slide4 div figure{
+    height: 350px;
+  }
+
+  /*SLIDE DEL FORMULARIO DEL CUAL SUS HIJOS TOMAN EL LARGO*/
+  .slide5{
+    position: relative;
+    top: -70px;
+  }
+
+  /*SLIDE CONTENEDOR DEL MAPA*/
+  .slide6{
+    height: 350px;
+    position: relative;
+    top: 10px;
+  }
+
+  /*DIV CONTENEDOR DEL MAPA DENTRO DEL SLIDE*/
+  .slide6 .map{
+    height: 350px;
+  }
+
+  /*PIE DE PAGINA DE LA PAGINA PRINCIPAL*/
+  footer{
+    position: relative;
+    top: 90px;
+  }
+
+}
+
+@media screen and (min-width:767px) {
+
+  /*CONTENEDOR PRINCIPAL DE LOS SLIDER*/
+  #slider{
+    height: 1700px;
+  }
+
+  /*CONTENEDOR SLIDER CON IMAGENES Y LOGO*/
+  div.cont_slide{
+    height: 380px;
+    margin-bottom: 100px;
+  }
+
+  div.cont_slide ul li{
+    height: 380px;
+  }
+
+  /*CLASE DEL SLIDER HOME*/
+ .slide{
+    height: 80%;
+  }
+
+  /*TITULOS INFORMACION PERSONAL*/
+  #home h3{
+    font-size: 3.5em;
+  }
+
+  #home p{
+    font-size: 2em;
+    margin: 40px 30px 0px 25px;
+  }
+
+  /*CONTENEDOR IMAGEN LUISA Y JEISON*/
+  #home figure{
+    width: 280px;
+    height: 280px;
+  }
+
+  /*IMAGEN LUISA*/
+  #home>figure>img{
+    width: 300px;
+    height: 300px;
+  }
+
+  /*IMAGEN JEISON*/
+  #home1>figure>img{
+    width: 290px;
+    height: 410px;
+    position: relative;
+    top: -40px;
+  }
+
+  /*CLASE DEL SLIDER NOSOTROS*/
+  .slide1{
+    height: 60%;
+  }
+
+  #nosotros>h4{
+    font-size: 4em;
+  }
+
+  #nosotros>p{
+    font-size: 2em;
+    margin: 0px 30px 45px 30px;
+  }
+
+
+  #servicios h4{
+    font-size: 4em;
+  }
+
+  /*PROPIEDADES GENERALES A LOS TITULOS DE LOS SERVICIOS*/
+  div h3{
+    font-size: 2em;
+  }
+
+  /*PROPIEDADES GENERALES A LOS ICONOS DENTRO DE LOS H3*/
+  div i{
+    font-size: 2em;
+    margin-top:-12px;
+  }
+
+  /*PROPIEDADES DE LOS PARRAFOS GENERALES DENTRO DE LOS SERVICIOS*/
+  div.contenido p{
+    font-size: 1.8em;
+    line-height: 35px;
+  }
+
+/*SLIDE DE HABILIDADES*/
+  .slide3{
+    height: 2300px;
+  }
+
+  /*TITULO DE HABILIDADES*/
+  .slide3 h4{
+    font-size: 4em;
+  }
+
+  /*CONTENEDOR DE HABILIDADES DENTRO DE HABILIDADES FULL*/
+  .habilidades{
+    height: 2300px;
+  }
+
+  /*SLIDE PRINCIPAL DE INFORMACION ADICIONAL*/
+  .slide4{
+    height: 2000px;
+    position: relative;
+    top:-165px;
+  }
+
+  /*PROPIEDADES ICONOS DENTRO DEL SLIDE4 INFORMACION ADICIONAL*/
+  .slide4 div i{
+    font-size: 7em;
+  }
+
+  /*PROPIEDADES DE LOS PARRAFOS*/
+  .slide4 div p{
+    font-size: 1.8em;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  /*PROPIEDADES DEL FIGURE CONTENEDOR DE LAS IMAGENES*/
+  .slide4 div figure{
+    height: 400px;
+  }
+
+  /*SLIDE DEL FORMULARIO DEL CUAL SUS HIJOS TOMAN EL LARGO*/
+  .slide5{
+    position: relative;
+    top: -150px;
+  }
+
+  /*SLIDE CONTENEDOR DEL MAPA*/
+  .slide6{
+    height: 400px;
+    position: relative;
+    top: -70px;
+  }
+
+  /*DIV CONTENEDOR DEL MAPA DENTRO DEL SLIDE*/
+  .slide6 .map{
+    height: 400px;
+  }
+
+  /*PIE DE PAGINA DE LA PAGINA PRINCIPAL*/
+  footer{
+    position: relative;
+    top: 10px;
+  }
+
+}
+@media screen and (min-width:1024px) {
+
+  /*CONTENEDOR POR ENCIMA DEL BODY*/
+  #contenedor_full{
+    width: 90%;
+    height: 9260px;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0px 3px 6px #000;
+  }
+
+/*ID DEL HEADER*/
+  #contenedor_menu{
+    width: 90%;
+    height: 100px;
+    position: fixed;
+    z-index: 999;
+    display: block;
+    background: linear-gradient(to right, #6eeeff, #880094);
+  }
+
+  header #menu{
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+
+  header #menu ul{
+    width: 100%;
+    height: 100%;
+    font-size: 1.8em;
+    list-style: none;
+  }
+
+  header #menu ul li{
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin: 0px -3px 0px -4px;
+    transition-duration:0.3s;
+  }
+
+  header #menu ul li a{
+    color: #000;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    line-height: 100px;
+    font-size: 0.7em;
+  }
+
+  #menu #sub-menu ul li a
+  {
+    font-size: 18px;
+  }
+
+  header #menu ul li:nth-child(1){
+    background: rgba(13, 209, 236, 0);
+  }
+
+  header #menu ul li:nth-child(1):hover{
+    background: rgba(13, 209, 236, 1);
+  }
+
+  header #menu ul li:nth-child(2){
+    background: rgba(66, 127, 232, 0);
+  }
+
+  header #menu ul li:nth-child(2):hover{
+    background: rgba(66, 127, 232, 1);
+  }
+
+  header #menu ul li:nth-child(3){
+    background: rgba(97, 79, 250, 0);
+  }
+
+  header #menu ul li:nth-child(3):hover{
+    background: rgba(97, 79, 250, 1);
+  }
+
+  header #menu ul li:nth-child(4){
+    background: rgba(126, 47, 254, 0);
+  }
+
+  header #menu ul li:nth-child(4):hover{
+    background: rgba(126, 47, 254, 1);
+  }
+
+  header #menu ul li:nth-child(5){
+    background: rgba(149, 0, 173, 0);
+  }
+
+  header #menu ul li:nth-child(5):hover{
+    background: rgba(149, 0, 173, 1);
+  }
+
+
+  #menucell{
+    display: none;
+  }
+
+  #showmenu{
+    display: none;
+  }
+
+  /*LOGO PRINCIPAL*/
+  #logo{
+    width: 80%;
+    height: 400px;
+    margin: 0px auto;
+    position: relative;
+    top:150px;
+    margin-bottom: 0px;
+  }
+
+  /*CONTENEDOR SLIDER CON IMAGENES Y LOGO*/
+  div.cont_slide{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    top: 250px;
+    box-shadow: 0px 0px 8px #000;
+  }
+
+  div.cont_slide ul li{
+    height: 600px;
+  }
+
+  /*CONTENEDOR PRINCIPAL DE LOS SLIDER*/
+  #slider{
+    height: 1100px;
+  }
+
+  /*CLASE DEL SLIDER HOME CON INFORMACION PERSONAL*/
+ .slide{
+    height: 85%;
+    margin-top: 380px;
+  }
+
+/*CLASE DEL SLIDER NOSOTROS*/
+  .slide1{
+    height: 80%;
+  }
+
+/*TEXTOS DE LUISA*/
+  #home>h3{
+    font-size: 3.5em;
+    margin-left: -40%;
+    font-weight: lighter;
+  }
+
+  #home>p{
+    font-size: 1.7em;
+    margin: 100px 55% 0px 20%;
+    float: left;
+  }
+
+  /*CONTENEDOR IMAGEN LUISA*/
+  #home>figure{
+    width: 260px;
+    height: 260px;
+    position: relative;
+    top: 40px;
+    margin-left: 18.5%;
+  }
+
+  #home>figure>img{
+    width: 320px;
+    height: 320px;
+  }
+
+/*TEXTOS DE JEISON*/
+  #home1>h3{
+    font-size: 3.5em;
+    margin-top: -420px;
+    margin-left: 42%;
+  }
+
+  #home1>p{
+    font-size: 1.7em;
+    margin: -560px 18% 0px 60%;
+    float: right;
+  }
+
+  /*CONTENEDOR IMAGEN JEISON*/
+  #home1>figure{
+    width: 260px;
+    height: 260px;
+    position: relative;
+    top: 35px;
+    margin-left: 58%;
+    margin-bottom: 660px;
+  }
+
+/*IMAGEN JEISON*/
+  #home1>figure>img{
+    width: 340px;
+    height: 360px;
+  }
+
+/*PARRAFOS DE "QUIENES SOMOS" */
+  #nosotros>p{
+    font-size: 1.8em;
+    margin: 0px 60px 55px 60px;
+  }
+
+  /*CONTENEDOR PRINCIPAL DE LOS SERVICIOS PARA MOVIL Y ESCRITORIO*/
+  .slide2{
+    height: 1000px;
+  }
+
+/*CONTENEDOR PARA SERVICIOS MOVILES*/
+  div.contenedor{
+    display: none;
+  }
+
+/*CONTENEDOR PRINCIPAL DE LOS SERVICIOS PARA ESCRITORIO*/
+  #contenedor_esc{
+    display: block;
+  }
+
+/*CONTENEDOR DE LAS HABILIDADES*/
+   .slide3{
+    height: 2200px;
+  }
+
+  /*SLIDE PRINCIPAL DE INFORMACION ADICIONAL*/
+  .slide4{
+    height: 1500px;
+    position: relative;
+    top: -265px;
+    overflow: hidden;
+  }
+
+  /*SUBCONTENEDOR DIVIDIDO EN 2 DIVS*/
+  .slide4 div{
+    text-align: inherit;
+    overflow: hidden;
+    margin: 0px;
+  }
+
+  /*PROPIEDADES ICONOS DENTRO DEL SLIDE4 PRIMER DIV*/
+  .slide4 .info1 i{
+    font-size: 6.5em;
+    margin-left:20%;
+  }
+
+  /*PROPIEDADES DE LOS PARRAFOS PRIMER DIV*/
+  .slide4 .info1 p{
+    font-size: 1.7em;
+    margin: 10px 52% 60px 5%;
+    text-align: justify;
+  }
+
+  /*PROPIEDADES DEL FIGURE CONTENEDOR DE LAS IMAGENES PRIMER DIV*/
+  .slide4 .info1 figure{
+    width: 50%;
+    height: 900px;
+    float: right;
+    margin-top: -670px;
+  }
+
+  /*PROPIEDADES ICONOS DENTRO DEL SLIDE4 SEGUNDO DIV*/
+  .slide4 .info2 i{
+    font-size: 6.5em;
+    margin-right: 20%;
+    float: right;
+  }
+
+  /*PROPIEDADES DE LOS PARRAFOS SEGUNDO DIV*/
+  .slide4 .info2 p{
+    font-size: 1.7em;
+    margin: 10px 5% 80px 52%;
+    float: right;
+    text-align: justify;
+  }
+
+  /*PROPIEDADES DEL FIGURE CONTENEDOR DE LAS IMAGENES SEGUNDO DIV*/
+  .slide4 .info2 figure{
+    width: 50%;
+    height: 1000px;
+    float: left;
+    margin-top: -900px;
+  }
+
+  /*SLIDE DEL FORMULARIO DEL CUAL SUS HIJOS TOMAN EL LARGO*/
+  .slide5{
+    position: relative;
+    top: -265px;
+    height: 410px;
+  }
+
+  /*CAMPOS PARA INGRESAR TEXTO*/
+  .slide5 #contact_form form input{
+    width: 80%;
+  }
+
+  /*BOTON DE ENVIAR*/
+  .slide5 #contact_form form #button{
+    font-size: 1.5em;
+    width: 35%;
+    height: 55px;
+    transition-duration: 0.3s;
+    animation: none;
+  }
+
+  /*AREA DE TEXTO PARA EL MENSAJE*/
+  .slide5 #contact_form form textarea{
+    max-width: 80%;
+    min-width: 80%;
+  }
+
+  .slide5 #contact_form form #button:hover{
+    background: #000000;
+    color: #ebc6ff;
+  }
+
+  /*SLIDE CONTENEDOR DEL MAPA*/
+  .slide6{
+    height: 600px;
+    position: relative;
+    top: -185px;
+  }
+
+  /*DIV CONTENEDOR DEL MAPA DENTRO DEL SLIDE*/
+  .slide6 .map{
+    height: 600px;
+  }
+
+  /*PIE DE PAGINA DE LA PAGINA PRINCIPAL*/
+  footer{
+    position: relative;
+    top: -105px;
+  }
+
+}
+
+@media screen and (min-width:1200px) {
+    /*CONTENEDOR POR ENCIMA DEL BODY*/
+    #contenedor_full{
+      height: 9215px;
+    }
+
+    header #menu ul li a{
+      font-size: 1em;
+    }
+
+    #menu #sub-menu ul li a{
+      font-size: 22px;
+    }
+
+    /*LOGO PRINCIPAL*/
+    #logo{
+      width: 65%;
+      position: relative;
+      top:150px;
+    }
+
+    /*CLASE DEL SLIDER NOSOTROS*/
+    .slide1{
+      height: 75%;
+    }
+
+    /*CONTENEDOR PRINCIPAL DE LOS SERVICIOS PARA MOVIL Y ESCRITORIO*/
+    .slide2{
+      position: relative;
+      top: 200px;
+    }
+
+    /*PARRAFO DE LUISA*/
+    #home>p{
+      margin: 100px 57% 0px 17%;
+      line-height: 35px;
+    }
+
+    /*CONTENEDOR IMAGEN LUISA*/
+    #home>figure{
+      margin-left: 22%;
+    }
+
+    #home1>p{
+      margin: -570px 18% 0px 60%;
+      line-height: 35px;
+    }
+
+    /*CONTENEDOR IMAGEN JEISON*/
+    #home1>figure{
+      margin-left: 63%;
+    }
+
+    /*IMAGEN JEISON*/
+    #home1>figure img{
+      position: relative;
+      left: -40px;
+    }
+
+    #nosotros>p{
+      font-size: 2em;
+      margin: 0px 70px 55px 70px;
+    }
+
+    .slide2{
+      top:0px;
+    }
+
+    #contenedor_esc{
+      margin-left:3px;
+    }
+
+    /*CLASE CONTENEDORA DE CADA SERVICIO CON IMAGEN Y TEXTOS*/
+    #contenedor_esc .contenido_esc{
+      width: 24.6%;
+    }
+
+    /*TITULOS DENTRO DE LOS SERVICIOS*/
+    #contenedor_esc .contenedor_h3 h3{
+      font-size: 1.8em;
+    }
+
+    /*PARRAFOS DE INFORMACION*/
+    #contenedor_esc .contenido_esc p{
+      font-size: 1.7em;
+      line-height: 26px;
+    }
+
+    #contenedor_esc .contenido_esc:nth-child(4){
+      font-size: 0.9em;
+    }
+
+    /*CONTENEDOR HABILIDADES FULL*/
+    .slide3{
+      top:0px;
+    }
+
+
+    /*PROPIEDADES ICONOS DENTRO DEL SLIDE4 PRIMER DIV*/
+    .slide4 .info1 i{
+      margin-left:22%;
+    }
+
+    /*PROPIEDADES DE LOS PARRAFOS PRIMER DIV*/
+    .slide4 .info1 p{
+      font-size: 2em;
+    }
+
+    /*PROPIEDADES DEL FIGURE CONTENEDOR DE LAS IMAGENES PRIMER DIV*/
+    .slide4 .info1 figure{
+      height: 900px;
+      margin-top: -710px;
+    }
+
+    /*PROPIEDADES ICONOS DENTRO DEL SLIDE4 SEGUNDO DIV*/
+    .slide4 .info2 i{
+      font-size: 7em;
+      margin-right: 22%;
+    }
+
+    /*PROPIEDADES DE LOS PARRAFOS SEGUNDO DIV*/
+    .slide4 .info2 p{
+      font-size: 2em;
+      margin: 10px 5% 90px 52%;
+    }
+
+    /*PROPIEDADES DEL FIGURE CONTENEDOR DE LAS IMAGENES SEGUNDO DIV*/
+    .slide4 .info2 figure{
+      height: 1000px;
+      margin-top: -900px;
+    }
+    /*SLIDE DEL FORMULARIO DEL CUAL SUS HIJOS TOMAN EL LARGO*/
+    .slide5{
+      height: 420px;
+    }
+
+    /*CAMPOS PARA INGRESAR TEXTO*/
+    .slide5 #contact_form form input{
+      width: 60%;
+    }
+
+    /*BOTON DE ENVIAR*/
+    .slide5 #contact_form form #button{
+      font-size: 1.7em;
+      width: 30%;
+      margin: 0px 5%;
+    }
+
+    /*AREA DE TEXTO PARA EL MENSAJE*/
+    .slide5 #contact_form form textarea{
+      max-width: 60%;
+      min-width: 60%;
+      max-height: 120px;
+      min-height: 120px;
+    }
+}
