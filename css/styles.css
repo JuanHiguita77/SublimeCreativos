@@ -167,9 +167,10 @@ header #menu-full{
   width: 70%;
   height: 405px;
   background-color: #6235AC;
-  left: 15%;
+  left: 14%;
   top:0px;
   z-index: 30;
+  display: none;
 }
 
 #iomenu{
@@ -228,7 +229,6 @@ header #menu-full{
 }
 
 
-
 /*SUBMENU DESPLEGABLE DESING*/
 #iomenu #sub-menu-movil ul{
   width: 60%;
@@ -254,6 +254,13 @@ header #menu-full{
   background-color: #798BD3;
 }
 
+#iomenu #sub-menu-movil ul li a{
+  font-size: 1em;
+  height: 55px;
+  line-height: 60px;
+}
+
+
 
 /*BOTONES ABRIR Y CERRAR MENU*/
 #showmenu{
@@ -269,6 +276,11 @@ header #menu-full{
 
 #showmenu:hover{
   transform: rotate(145deg);
+}
+
+/*BOTON PARA APARECER MENU*/
+#showmenu:hover #menucell{
+  display: block;
 }
 
 /*LOGO PRINCIPAL*/
@@ -1107,10 +1119,10 @@ footer .avisos a:hover{
 
 @media screen and (min-width:480px){
 
-  /*CONTENEDOR MENU DE CELULAR*/
+  /*MENU CELULAR RESPONSIVE*/
   #menucell{
     width: 75%;
-    height: 400px;
+    height: 380px;
   }
 
   #iomenu ul li a{
@@ -1121,7 +1133,7 @@ footer .avisos a:hover{
 
   #menucell #iomenu{
     position: relative;
-    top: -10px;
+    top: 0px;
   }
 
   #menucell #iomenu h1{
@@ -1129,12 +1141,30 @@ footer .avisos a:hover{
     line-height: 90px;
   }
 
+  /*SUBMENU MOVIL RESPONSIVE*/
+  #iomenu #sub-menu-movil ul li a{
+    font-size: 1em;
+    height: 55px;
+    line-height: 60px;
+  }
 }
 
 @media screen and (min-width:600px) {
 
+  /*MENU CELULAR RESPONSIVE*/
   #menucell{
-    height: 340px;
+    height: 330px;
+  }
+
+  #iomenu ul li a{
+    font-size: 1.3em;
+    width: 100%;
+    height: 50px;
+    line-height:50px;
+  }
+
+  #sub-menu-movil ul li{
+    font-size: 1em;
   }
 
   /*BOTONES ABRIR Y CERRAR MENU*/
@@ -1150,17 +1180,6 @@ footer .avisos a:hover{
     height: 80px;
     font-size: 30px;
     line-height: 85px;
-  }
-
-  #iomenu ul li a{
-    font-size: 1.3em;
-    width: 100%;
-    height: 50px;
-    line-height:50px;
-  }
-
-  #sub-menu-movil ul li{
-    font-size: 0.8em;
   }
 
   /*CONTENEDOR SLIDER CON IMAGENES Y LOGO*/
@@ -1382,10 +1401,16 @@ footer .avisos a:hover{
     position: relative;
     top: 90px;
   }
-
 }
 
 @media screen and (min-width:767px) {
+
+  /*MENU CELULAR RESPONSIVE*/
+  #menucell{
+    width: 65%;
+    height: 330px;
+    left: 18%;
+  }
 
   /*CONTENEDOR PRINCIPAL DE LOS SLIDER*/
   #slider{
