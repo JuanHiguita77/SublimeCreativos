@@ -117,13 +117,57 @@ header #menu{
   transition: 0.5s;
 }
 
+
+/*CONTENEDOR MENU PARA PAGINA FULL EN PC*/
+#contenedor-menu-full{
+  display: none;
+}
+
+header #menu-full{
+  display: none;
+}
+
+#menu-full #sub-menu-full ul{
+  display: none;
+}
+
+/*MENU DESPLEGABLE*/
+#menu-full #sub-menu-full li
+{
+  width: 100%;
+  height: 70px;
+  margin-left: 3px;
+  background-color: #880094;
+  opacity: 0.95;
+  display: block;
+  position: relative;
+  top: 100px;
+  border-bottom: 2px solid;
+}
+
+#menu-full #sub-menu-full ul li a
+{
+  font-size: 24px;
+  line-height: 75px;
+}
+
+#menu-full #sub-menu-full:hover ul{
+  display: block;
+}
+
+#menu-full #sub-menu-full ul li:hover
+{
+  background-color: #798BD3;
+  transition: 0.5s;
+}
+
 /*CONTENEDOR MENU DE CELULAR*/
 #menucell{
   position: fixed;
-  width: 80%;
-  height: 680px;
+  width: 70%;
+  height: 405px;
   background-color: #6235AC;
-  left: 10%;
+  left: 15%;
   top:0px;
   z-index: 30;
 }
@@ -133,31 +177,17 @@ header #menu{
   width: 100%;
 }
 
-header h1{
-  font-size: 45px;
+#menucell #iomenu h1{
+  height: 80px;
+  font-size: 25px;
   text-align: center;
   border-bottom: #fff 3px solid;
   text-shadow: 2px 2px rgb(0, 0, 0, 0.2);
   position: relative;
-  line-height: 70px;
-  top: -20px;
-  margin-bottom: 35px;
-}
-
-/*BOTONES ABRIR Y CERRAR MENU*/
-#showmenu{
-  width: 80px;
-  height: 80px;
-  position: fixed;
-  bottom:40px;
-  right: 20px;
-  z-index: 999;
-  transition-duration: 0.4s;
-  
-}
-
-#showmenu:hover{
-  transform: rotate(145deg);
+  line-height: 95px;
+  top: -10px;
+  margin-bottom: 40px;
+  background-color: #9919A1;
 }
 
 /*MENU MOVIL DISEÑO*/
@@ -188,18 +218,15 @@ header h1{
 
 #iomenu ul li a{
   display: block;
-  font-size: 2.2em;
+  font-size: 1.5em;
   width: 100%;
-  height: 118px;
+  height: 65px;
   text-decoration: none;
   color: #000;
-  line-height:120px;
+  line-height:75px;
   border-bottom:solid #fff;
 }
 
-#iomenu h1{
-  background-color: #9919A1;
-}
 
 
 /*SUBMENU DESPLEGABLE DESING*/
@@ -228,7 +255,21 @@ header h1{
 }
 
 
+/*BOTONES ABRIR Y CERRAR MENU*/
+#showmenu{
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  bottom:40px;
+  right: 20px;
+  z-index: 999;
+  transition-duration: 0.4s;
+  
+}
 
+#showmenu:hover{
+  transform: rotate(145deg);
+}
 
 /*LOGO PRINCIPAL*/
 #logo{
@@ -928,6 +969,7 @@ DENTRO DE CONTENEDOR FULL*/
   height: 100%;
 }
 
+
 /*PIE DE PAGINA DE LA PAGINA PRINCIPAL*/
 footer{
   width: 100%;
@@ -1082,7 +1124,7 @@ footer .avisos a:hover{
     top: -10px;
   }
 
-  header h1{
+  #menucell #iomenu h1{
     font-size: 30px;
     line-height: 90px;
   }
@@ -1506,7 +1548,7 @@ footer .avisos a:hover{
     box-shadow: 0px 3px 6px #000;
   }
 
-/*ID DEL HEADER*/
+  /*ID DEL HEADER*/
   #contenedor_menu{
     width: 90%;
     height: 100px;
@@ -1597,6 +1639,96 @@ footer .avisos a:hover{
     background: rgba(149, 0, 173, 1);
   }
 
+  /*MENU FULL PARA PC*/
+  #contenedor-menu-full{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 999;
+    display: block;
+    background: linear-gradient(to right, #6eeeff, #880094);
+  }
+
+  header #menu-full{
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+
+  header #menu-full ul{
+    width: 100%;
+    height: 100%;
+    font-size: 1.8em;
+    list-style: none;
+  }
+
+  header #menu-full ul li{
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin: 0px -3px 0px -4px;
+    transition-duration:0.3s;
+  }
+
+  header #menu-full ul li a{
+    color: #000;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    line-height: 100px;
+    font-size: 0.7em;
+  }
+
+  #menu-full #sub-menu-full ul li a
+  {
+    font-size: 18px;
+  }
+
+  header #menu-full ul li:nth-child(1){
+    background: rgba(13, 209, 236, 0);
+  }
+
+  header #menu-full ul li:nth-child(1):hover{
+    background: rgba(13, 209, 236, 1);
+  }
+
+  header #menu-full ul li:nth-child(2){
+    background: rgba(66, 127, 232, 0);
+  }
+
+  header #menu-full ul li:nth-child(2):hover{
+    background: rgba(66, 127, 232, 1);
+  }
+
+  header #menu-full ul li:nth-child(3){
+    background: rgba(97, 79, 250, 0);
+  }
+
+  header #menu-full ul li:nth-child(3):hover{
+    background: rgba(97, 79, 250, 1);
+  }
+
+  header #menu-full ul li:nth-child(4){
+    background: rgba(126, 47, 254, 0);
+  }
+
+  header #menu-full ul li:nth-child(4):hover{
+    background: rgba(126, 47, 254, 1);
+  }
+
+  header #menu-full ul li:nth-child(5){
+    background: rgba(149, 0, 173, 0);
+  }
+
+  header #menu-full ul li:nth-child(5):hover{
+    background: rgba(149, 0, 173, 1);
+  }
 
   #menucell{
     display: none;
@@ -1605,6 +1737,7 @@ footer .avisos a:hover{
   #showmenu{
     display: none;
   }
+
 
   /*LOGO PRINCIPAL*/
   #logo{
