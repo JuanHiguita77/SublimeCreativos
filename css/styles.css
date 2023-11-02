@@ -103,7 +103,7 @@ header #menu{
 
 #menu #sub-menu ul li a
 {
-  font-size: 24px;
+  font-size: 5em;
   line-height: 75px;
 }
 
@@ -161,16 +161,36 @@ header #menu-full{
   transition: 0.5s;
 }
 
+/*BOTONES ABRIR Y CERRAR MENU*/
+#showmenu{
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  bottom:40px;
+  right: 20px;
+  z-index: 99;
+  transition-duration: 0.4s;
+}
+
+/*BOTON PARA APARECER MENU*/
+#showmenu:hover + #menucell{
+  display: block;
+}
+
+#showmenu:hover {
+  transform: rotate(145deg);
+}
+
 /*CONTENEDOR MENU DE CELULAR*/
 #menucell{
   position: fixed;
   width: 70%;
-  height: 405px;
+  height: 375px;
   background-color: #6235AC;
   left: 14%;
   top:0px;
-  z-index: 30;
-  display: none;
+  z-index: 99;
+  border-radius: 0 0 8px 8px;
 }
 
 #iomenu{
@@ -185,8 +205,8 @@ header #menu-full{
   border-bottom: #fff 3px solid;
   text-shadow: 2px 2px rgb(0, 0, 0, 0.2);
   position: relative;
-  line-height: 95px;
-  top: -10px;
+  line-height: 85px;
+  top: -16px;
   margin-bottom: 40px;
   background-color: #9919A1;
 }
@@ -219,13 +239,14 @@ header #menu-full{
 
 #iomenu ul li a{
   display: block;
-  font-size: 1.5em;
+  font-size: 1em;
   width: 100%;
-  height: 65px;
+  height: 55px;
   text-decoration: none;
   color: #000;
-  line-height:75px;
+  line-height:60px;
   border-bottom:solid #fff;
+  border-radius: 0 0 8px 8px;
 }
 
 
@@ -250,6 +271,10 @@ header #menu-full{
   background-color: #9919A1;
 }
 
+#iomenu #sub-menu-movil ul li:nth-child(2){
+  border-radius: 0 0 8px 8px;
+}
+
 #iomenu #sub-menu-movil ul li:hover{
   background-color: #798BD3;
 }
@@ -261,27 +286,6 @@ header #menu-full{
 }
 
 
-
-/*BOTONES ABRIR Y CERRAR MENU*/
-#showmenu{
-  width: 80px;
-  height: 80px;
-  position: fixed;
-  bottom:40px;
-  right: 20px;
-  z-index: 999;
-  transition-duration: 0.4s;
-  
-}
-
-#showmenu:hover{
-  transform: rotate(145deg);
-}
-
-/*BOTON PARA APARECER MENU*/
-#showmenu:hover #menucell{
-  display: block;
-}
 
 /*LOGO PRINCIPAL*/
 #logo{
@@ -1122,7 +1126,7 @@ footer .avisos a:hover{
   /*MENU CELULAR RESPONSIVE*/
   #menucell{
     width: 75%;
-    height: 380px;
+    height: 400px;
   }
 
   #iomenu ul li a{
@@ -1138,7 +1142,8 @@ footer .avisos a:hover{
 
   #menucell #iomenu h1{
     font-size: 30px;
-    line-height: 90px;
+    line-height: 75px;
+    top: -20px;
   }
 
   /*SUBMENU MOVIL RESPONSIVE*/
@@ -1153,7 +1158,7 @@ footer .avisos a:hover{
 
   /*MENU CELULAR RESPONSIVE*/
   #menucell{
-    height: 330px;
+    height: 350px;
   }
 
   #iomenu ul li a{
@@ -1408,7 +1413,7 @@ footer .avisos a:hover{
   /*MENU CELULAR RESPONSIVE*/
   #menucell{
     width: 65%;
-    height: 330px;
+    height: 350px;
     left: 18%;
   }
 
@@ -1685,7 +1690,7 @@ footer .avisos a:hover{
   header #menu-full ul{
     width: 100%;
     height: 100%;
-    font-size: 1.8em;
+    font-size: 2em;
     list-style: none;
   }
 
@@ -1695,7 +1700,7 @@ footer .avisos a:hover{
     text-align: center;
     position: relative;
     display: inline-block;
-    margin: 0px -3px 0px -4px;
+    margin: 0px -3px 0px -5px;
     transition-duration:0.3s;
   }
 
@@ -2003,11 +2008,11 @@ footer .avisos a:hover{
     }
 
     header #menu ul li a{
-      font-size: 1em;
+      font-size: 0.7em;
     }
 
     #menu #sub-menu ul li a{
-      font-size: 22px;
+      font-size: 0.4em;
     }
 
     /*LOGO PRINCIPAL*/
