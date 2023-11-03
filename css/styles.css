@@ -1024,7 +1024,6 @@ footer .iconos img{
   width: 100%;
   height: 100%;
   position: relative;
-  right: 50px;
 }
 
 footer .iconos:nth-child(2)
@@ -2058,16 +2057,28 @@ footer p{
      grid-column: 2/3;
      grid-row: 2/3;
      position: relative;
+     top: 10px;
    }
 
    footer .iconos img{
     width: 100%;
     height: 100%;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    position: relative;
   }
    
+  footer .iconos:nth-child(2){
+    grid-column: 2/3;
+    grid-row: 2/3;
+    left: -100px;
+    margin-top: 0;
+  }
+
+  footer .iconos:nth-child(3){
+    grid-column: 2/3;
+    grid-row: 2/3;
+    right: -120px;
+    margin-top: 0;
+  }
+
    footer h3{
      grid-column: 1/4;
    }
