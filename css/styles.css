@@ -191,6 +191,7 @@ header #menu-full{
   top:0px;
   z-index: 99;
   border-radius: 0 0 8px 8px;
+  display: none;
 }
 
 #iomenu{
@@ -287,18 +288,18 @@ header #menu-full{
 
 
 
-/*LOGO PRINCIPAL*/
+/*LOGO INICIAL*/
 #logo{
   width: 100%;
   height: auto;
   position: relative;
-  top:30px;
-  margin-bottom: 70px;
+  top:85px;
+  margin-bottom: 215px;
 }
 
 #logo img{
   width: 100%;
-  height: 100%;
+  height: 365px;
 }
 
 /*CONTENEDOR SLIDER CON IMAGENES Y LOGO*/
@@ -451,7 +452,7 @@ div.cont_slide ul li img{
   width: 100%;
   height: auto;
   position: relative;
-  top:-180px;
+  top:55px;
 }
 
 /*TITULO SERVICIOS*/
@@ -463,9 +464,11 @@ div.cont_slide ul li img{
 }
 
 /*CONTENEDOR SECUNDARIO DE LOS SERVICIOS*/
-div.contenedor{
+.slide2 .contenedor{
   width: 100%;
   height: 90%;
+  position: relative;
+  top: -50px;
   transition-duration:0.3s;
 }
 
@@ -493,7 +496,7 @@ div.titulo1,.titulo2,.titulo3,.titulo4,
 
 /*PROPIEDADES GENERALES A LOS TITULOS DE LOS SERVICIOS*/
 div h3{
-  font-size: 2em;
+  font-size: 1.6em;
   margin-top: 12px;
   font-weight: lighter;
 }
@@ -501,7 +504,7 @@ div h3{
 /*PROPIEDADES GENERALES A LOS ICONOS DENTRO DE LOS H3*/
 div.contenedor i{
   float: right;
-  font-size: 1.8em;
+  font-size: 1.7em;
   margin-top: -12px;
 }
 
@@ -513,6 +516,7 @@ div.contenedor i{
   margin-right: 10px;
   border-radius: 5px;
   overflow: hidden;
+  border: #000 2px solid;
 }
 
 .contenido figure img{
@@ -522,7 +526,7 @@ div.contenedor i{
 
 /*PROPIEDADES DE LOS PARRAFOS GENERALES DENTRO DE LOS SERVICIOS*/
 div.contenido p{
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-family: Courgette;
   margin-bottom: 15px;
   line-height: 35px;
@@ -709,10 +713,10 @@ DENTRO DE CONTENEDOR FULL*/
 /*CONTENEDOR HABILIDADES FULL*/
 .slide3{
   width: 100%;
-  height: 2200px;
+  height: 1800px;
   background:#6bb0f9;
   position: relative;
-  top:-180px;
+  top:5px;
 }
 
 /*TITULO DE HABILIDADES*/
@@ -725,8 +729,18 @@ DENTRO DE CONTENEDOR FULL*/
 /*CONTENEDOR DE HABILIDADES DENTRO DE HABILIDADES FULL*/
 .habilidades{
   width: 100%;
-  height: 2000px;
+  height: 1660px;
   margin-top:60px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.habilidades img{
+  width: 280px;
+  height: 280px;
 }
 
 /*SUBCONTENEDORES DENTRO DE HABILIDADES CON LOS PORCENTAJES*/
@@ -774,6 +788,7 @@ DENTRO DE CONTENEDOR FULL*/
   position: relative;
   top: 100px;
   font-family: Courgette;
+  border-bottom: #000 2px solid;
 }
 
 /*SUBCONTENEDOR DIVIDIDO EN 2 DIVS*/
@@ -991,7 +1006,7 @@ footer{
   width: 100%;
   height: 140px;
   position: relative;
-  top: 320px;
+  top: 180px;
   padding-top:5px;
   overflow: hidden;
 }
@@ -1187,14 +1202,25 @@ footer .avisos a:hover{
     line-height: 85px;
   }
 
+  /*LGO PRINCIPAL*/
+  #logo{
+    height: 600px;
+  }
+
+  #logo img
+  {
+    height: 80%;
+    margin-top: 55px;
+  }
+
   /*CONTENEDOR SLIDER CON IMAGENES Y LOGO*/
   div.cont_slide{
-    height: 350px;
+    height: auto;
   }
 
   /*ALTURA DE LOS ELEMENTOS DENTRO DEL SLIDER MOVIL*/
   div.cont_slide ul li{
-    height: 350px;
+    height: 515;
   }
 
   /*CONTENEDOR PRINCIPAL DE LOS SLIDER*/
@@ -1241,7 +1267,7 @@ footer .avisos a:hover{
 
     /*CONTENEDOR PRINCIPAL DE LOS SERVICIOS PARA MOVIL*/
     .slide2{
-      top: 0px;
+      top: 55px;
     }
 
   /*PROPIEDADES GENERALES A LOS TITULOS DE LOS SERVICIOS*/
@@ -1340,7 +1366,8 @@ footer .avisos a:hover{
 
   /*SLIDE CONTENEDOR DE HABILIDADES*/
   .slide3{
-    top: 0px;
+    height: 1860px;
+    top: 5px;
   }
 
   /*TITULO DE HABILIDADES*/
@@ -1350,7 +1377,7 @@ footer .avisos a:hover{
 
   /*CONTENEDOR DE HABILIDADES DENTRO DE HABILIDADES FULL*/
   .habilidades{
-    height: 2300px;
+    height: 1820px;
     margin-top:90px;
   }
 
@@ -1404,7 +1431,7 @@ footer .avisos a:hover{
   /*PIE DE PAGINA DE LA PAGINA PRINCIPAL*/
   footer{
     position: relative;
-    top: 90px;
+    top: 0px;
   }
 }
 
@@ -1424,13 +1451,10 @@ footer .avisos a:hover{
 
   /*CONTENEDOR SLIDER CON IMAGENES Y LOGO*/
   div.cont_slide{
-    height: 380px;
+    height: auto;
     margin-bottom: 100px;
   }
 
-  div.cont_slide ul li{
-    height: 380px;
-  }
 
   /*CLASE DEL SLIDER HOME*/
  .slide{
@@ -1505,7 +1529,7 @@ footer .avisos a:hover{
 
 /*SLIDE DE HABILIDADES*/
   .slide3{
-    height: 2300px;
+    height: 1860px;
   }
 
   /*TITULO DE HABILIDADES*/
@@ -1515,7 +1539,7 @@ footer .avisos a:hover{
 
   /*CONTENEDOR DE HABILIDADES DENTRO DE HABILIDADES FULL*/
   .habilidades{
-    height: 2300px;
+    height: 1910px;
   }
 
   /*SLIDE PRINCIPAL DE INFORMACION ADICIONAL*/
@@ -1563,7 +1587,7 @@ footer .avisos a:hover{
   /*PIE DE PAGINA DE LA PAGINA PRINCIPAL*/
   footer{
     position: relative;
-    top: 10px;
+    top: -70px;
   }
 
 }
@@ -1572,7 +1596,7 @@ footer .avisos a:hover{
   /*CONTENEDOR POR ENCIMA DEL BODY*/
   #contenedor_full{
     width: 90%;
-    height: 9260px;
+    height: 6060px;
     margin: auto;
     overflow: hidden;
     box-shadow: 0px 3px 6px #000;
@@ -1772,7 +1796,7 @@ footer .avisos a:hover{
   /*LOGO PRINCIPAL*/
   #logo{
     width: 80%;
-    height: 400px;
+    height: 712px;
     margin: 0px auto;
     position: relative;
     top:150px;
@@ -1782,14 +1806,14 @@ footer .avisos a:hover{
   /*CONTENEDOR SLIDER CON IMAGENES Y LOGO*/
   div.cont_slide{
     width: 100%;
-    height: 600px;
+    height: auto;
     position: relative;
     top: 250px;
     box-shadow: 0px 0px 8px #000;
   }
 
   div.cont_slide ul li{
-    height: 600px;
+    height: 665px;
   }
 
   /*CONTENEDOR PRINCIPAL DE LOS SLIDER*/
@@ -1872,6 +1896,7 @@ footer .avisos a:hover{
 
   /*CONTENEDOR PRINCIPAL DE LOS SERVICIOS PARA MOVIL Y ESCRITORIO*/
   .slide2{
+    top: 200px;
     height: 1000px;
   }
 
@@ -1885,9 +1910,14 @@ footer .avisos a:hover{
     display: block;
   }
 
-/*CONTENEDOR DE LAS HABILIDADES*/
+  /*CONTENEDOR DE LAS HABILIDADES*/
    .slide3{
-    height: 2200px;
+    height: 1845px;
+    top: 50px;
+  }
+
+  .habilidades{
+    height: 1946px;
   }
 
   /*SLIDE PRINCIPAL DE INFORMACION ADICIONAL*/
@@ -1996,7 +2026,7 @@ footer .avisos a:hover{
   /*PIE DE PAGINA DE LA PAGINA PRINCIPAL*/
   footer{
     position: relative;
-    top: -105px;
+    top: -250px;
   }
 
 }
@@ -2004,7 +2034,7 @@ footer .avisos a:hover{
 @media screen and (min-width:1200px) {
     /*CONTENEDOR POR ENCIMA DEL BODY*/
     #contenedor_full{
-      height: 9215px;
+      height: 6240px;
     }
 
     header #menu ul li a{
@@ -2020,6 +2050,10 @@ footer .avisos a:hover{
       width: 65%;
       position: relative;
       top:150px;
+    }
+
+    div.cont_slide ul li{
+      height: 860px;
     }
 
     /*CLASE DEL SLIDER NOSOTROS*/
@@ -2065,12 +2099,8 @@ footer .avisos a:hover{
       margin: 0px 70px 55px 70px;
     }
 
-    .slide2{
-      top:0px;
-    }
-
     #contenedor_esc{
-      margin-left:3px;
+      margin:0 0.5%;
     }
 
     /*CLASE CONTENEDORA DE CADA SERVICIO CON IMAGEN Y TEXTOS*/
@@ -2095,9 +2125,17 @@ footer .avisos a:hover{
 
     /*CONTENEDOR HABILIDADES FULL*/
     .slide3{
-      top:0px;
+      top:50px;
     }
 
+    .habilidades{
+      height: 1940px;
+    }
+
+    /*SUBCONTENEDOR DIVIDIDO EN 2 DIVS*/
+    .slide4 div{
+      margin-top: 6px;
+    }
 
     /*PROPIEDADES ICONOS DENTRO DEL SLIDE4 PRIMER DIV*/
     .slide4 .info1 i{
