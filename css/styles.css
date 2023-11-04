@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+
 *{
   padding: 0px;
   margin: 0px;
@@ -12,62 +15,6 @@ body{
   font-family: 'Gabriela', serif;
   background:#ffb5ee;
 }
-
-/*
-#mensaje_exitoso{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#mensaje_exitoso div{
-  background: #e6e6e6;
-  width: 80%;
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top:300px;
-  border-radius:50px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
-}
-
-#mensaje_exitoso div p{
-  font-family: Courgette;
-  font-size: 2em;
-  margin-top: -40px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-#mensaje_exitoso div a{
-  font-family: arial;
-  font-size: 1.2em;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: #000;
-  text-align: center;
-  line-height: 40px;
-  transition-duration: 0.3s;
-}
-
-#mensaje_exitoso div a:hover{
-  color: #fff;
-}
-
-#mensaje_exitoso .button{
-  background: #0068f2;
-  width: 65%;
-  height: 40px;
-  position: absolute;
-  top: 70%;
-}
-*/
-
 
 #aviso_legal p{
   text-align: justify;
@@ -173,7 +120,7 @@ header #menu-full{
 }
 
 /*BOTON PARA APARECER MENU*/
-#showmenu:hover + #menucell{
+#showmenu:hover ~ #menucell{
   display: block;
 }
 
@@ -492,6 +439,22 @@ div.titulo1,.titulo2,.titulo3,.titulo4,
   width: 100%;
   height: auto;
   border-bottom: 2px solid #424241;
+}
+
+div .titulo1 h3{
+  animation: list-jump 1s infinite;
+}
+
+@keyframes list-jump {
+  0% {
+      transform: translateY(0px);
+  }
+  50% {
+      transform: translateY(-12px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
 }
 
 /*PROPIEDADES GENERALES A LOS TITULOS DE LOS SERVICIOS*/
@@ -1016,14 +979,23 @@ footer{
 footer .iconos{
   width: 50px;
   height: 45px;
-  position: relative;
-  right: -60px;
+  animation: pulse 1s infinite;
 }
 
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
 footer .iconos img{
   width: 100%;
   height: 100%;
-  position: relative;
 }
 
 footer .iconos:nth-child(2)
@@ -1267,24 +1239,24 @@ footer p{
   }
 
   /*CLASE DEL SLIDER NOSOTROS QUIENES SOMOS*/
-    .slide1{
-      height: 50%;
-      top: 0px;
-    }
+  .slide1{
+    height: 50%;
+    top: 0px;
+  }
 
-    #nosotros>h4{
-      font-size: 3.5em;
-    }
+  #nosotros>h4{
+    font-size: 3.5em;
+  }
 
-    #nosotros>p{
-      font-size: 1.8em;
-      margin: 0px 25px 45px 25px;
-    }
+  #nosotros>p{
+    font-size: 1.8em;
+    margin: 0px 25px 45px 25px;
+  }
 
-    /*CONTENEDOR PRINCIPAL DE LOS SERVICIOS PARA MOVIL*/
-    .slide2{
-      top: 55px;
-    }
+  /*CONTENEDOR PRINCIPAL DE LOS SERVICIOS PARA MOVIL*/
+  .slide2{
+    top: 55px;
+  }
 
   /*PROPIEDADES GENERALES A LOS TITULOS DE LOS SERVICIOS*/
   div h3{
@@ -1612,7 +1584,7 @@ footer p{
   /*CONTENEDOR POR ENCIMA DEL BODY*/
   #contenedor_full{
     width: 90%;
-    height: 6143px;
+    height: 6195px;
     margin: auto;
     overflow: hidden;
     box-shadow: 0px 3px 6px #000;
@@ -2042,22 +2014,18 @@ footer p{
    /*PIE DE PAGINA*/
    footer
    {
-     height: auto;
-     margin-top: 8%;
+     height: 300px;
      text-align: center;
      display: grid;
      grid-template-columns: 1fr 1fr 1fr;
-     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-     top: -343px;
+     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr  ;
+     top: -268px;
    }
    
    footer .iconos{
      width: 57px;
      height: 47px;
-     grid-column: 2/3;
-     grid-row: 2/3;
      position: relative;
-     top: 10px;
    }
 
    footer .iconos img{
@@ -2067,25 +2035,27 @@ footer p{
    
   footer .iconos:nth-child(2){
     grid-column: 2/3;
-    grid-row: 2/3;
+    grid-row: 3/4;
     left: -100px;
     margin-top: 0;
   }
 
   footer .iconos:nth-child(3){
     grid-column: 2/3;
-    grid-row: 2/3;
+    grid-row: 3/4;
     right: -120px;
     margin-top: 0;
   }
 
    footer h3{
      grid-column: 1/4;
+     grid-row: 1/2;
+     line-height: 6px;
+     margin-top: 40px;
    }
    
    footer a,footer p{
      position: relative;
-     top:-10px;
      grid-column: 2/3;
      text-decoration: none;
      color: #000;
@@ -2094,18 +2064,17 @@ footer p{
    }
    
    footer a:nth-child(5){
-     grid-row: 3/4;
-     top:-10px;
+     grid-row: 4/5;
+
    }
    
    footer a:nth-child(7){
-     grid-row: 4/5;
-     top:-60px;
+     grid-row: 5/6;
    }
    
    footer p{ 
-     grid-row: 5/6;
-     top:-100px;
+    grid-column: 1/4;
+     grid-row: 6/7;
      font-family: 'courgette';
    }
 
@@ -2114,7 +2083,8 @@ footer p{
 @media screen and (min-width:1200px) {
     /*CONTENEDOR POR ENCIMA DEL BODY*/
     #contenedor_full{
-      height: 6330px;
+      height: 6400px;
+      overflow: inherit;
     }
 
     header #menu ul li a{
@@ -2220,7 +2190,7 @@ footer p{
     /*PIE DE PAGINA*/
     footer
     {
-      top: -350px;
+      top: -265px;
     }
 
     /*PROPIEDADES ICONOS DENTRO DEL SLIDE4 PRIMER DIV*/
