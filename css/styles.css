@@ -964,6 +964,88 @@ DENTRO DE CONTENEDOR FULL*/
   height: 100%;
 }
 
+/*CATALOGO DE PRODUCTOS*/
+
+#logo-catalog{
+  width: 100%;
+  height: 245px;
+  position: relative;
+  top: 65px;
+  overflow: hidden;
+}
+
+#logo-catalog img{
+  width: 100%;
+  height: 100%;
+}
+
+#catalog-container h2{
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+  top: 140px;
+  font-weight: lighter;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#catalog{
+  position: relative;
+  top: 200px;
+  border-top: #000 1.5px solid;
+  border-bottom: #000 1.5px solid;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 110px;
+}
+
+
+#catalog-container #catalog .catalog-card{
+  width: 90%;
+  height: auto;
+  text-align: center;
+  margin: 0 0 60px 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.catalog-card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+#catalog-container #catalog .catalog-card h3{
+  width: 100%;
+  height: 80px;
+  font-size: 20px;
+  background-color: #CEF3FF;
+  margin-top: -5px;
+  line-height: 40px;
+}
+
+/*CENTRAR LOS TITULOS DE LAS TARJETAS QUE NO OCUPAN 2 LINEAS EN EL CATALOGO*/
+#catalog-container #catalog .catalog-card:nth-child(1) h3,
+#catalog-container #catalog .catalog-card:nth-child(2) h3,
+#catalog-container #catalog .catalog-card:nth-child(3) h3,
+#catalog-container #catalog .catalog-card:nth-child(4) h3,
+#catalog-container #catalog .catalog-card:nth-child(5) h3,
+#catalog-container #catalog .catalog-card:nth-child(6) h3,
+#catalog-container #catalog .catalog-card:nth-child(10) h3,
+#catalog-container #catalog .catalog-card:nth-child(11) h3,
+#catalog-container #catalog .catalog-card:nth-child(12) h3,
+#catalog-container #catalog .catalog-card:nth-child(15) h3{
+  line-height: 80px;
+}
+
+#catalog-container #catalog .catalog-card img{
+  width: 100%;
+  height: 260px;
+}
+
+
 /*PIE DE PAGINA DE LA PAGINA PRINCIPAL*/
 footer{
   width: 100%;
@@ -993,6 +1075,7 @@ footer .iconos{
       transform: scale(1);
   }
 }
+
 footer .iconos img{
   width: 100%;
   height: 100%;
@@ -1051,73 +1134,6 @@ footer p{
   font-family: 'courgette';
 }
 
-/*ID DEL PIE DE PAGINA PARA LA PAGINAD DE MENSAJE EXITOSO*/
-#footer{
-  width: 100%;
-  height: 140px;
-  background: #1385fa;
-  position: relative;
-  top: 504px;
-  padding-top:5px;
-  overflow: hidden;
-}
-
-/*TITULO DEL FOOTER*/
-#footer p{
-  color: #fff;
-  font-family: arial;
-  text-align: center;
-  font-size: 1.2em;
-}
-
-/*CONTENEDOR DE LOS ICONOS*/
-#footer .icons{
-  width: 300px;
-  height: auto;
-  margin: 0px auto;
-  position: relative;
-  top:20px;
-}
-
-/*PROPIEDADES PARA LOS ICONOS*/
-#footer .icons i{
-  color: #fff;
-  font-size: 2.4em;
-  margin:0px 27px;
-  display: inline-block;
-  transition-duration: 0.5s;
-}
-
-/*HOVER PARA LOS ICONOS*/
-#footer .icons i:hover{
-  color: #000;
-  transform: rotateY(360deg);
-}
-
-/*CONTENEDOR DE LOS AVISOS*/
-#footer .avisos{
-  width: 160px;
-  height: auto;
-  margin: 0px auto;
-  position: relative;
-  bottom: -30px;
-}
-
-/*PROPIEDADES DE LOS LINKS*/
-#footer .avisos a{
-  text-decoration: none;
-  color: #fff;
-  font-size: 1em;
-  text-align: center;
-  display: block;
-  margin-bottom: 8px;
-  font-family: arial;
-  transition-duration:0.3s;
-}
-
-#footer .avisos a:hover{
-  color: #000;
-}
 
 @media screen and (min-width:480px){
 
@@ -1369,7 +1385,6 @@ footer p{
     margin-top:90px;
   }
 
-
   /*SLIDE PRINCIPAL DE INFORMACION ADICIONAL*/
   .slide4{
     height: 1916px;
@@ -1416,6 +1431,22 @@ footer p{
     height: 350px;
   }
 
+  /*CATALOGO*/
+  /*TAMAÑO ESTANDAR DEL CATALOGO PARA SOLUCIONAR BUG DE TAMAÑO*/
+  #catalog-body{
+    height: 7940px;
+  }
+
+  /*CONTENEDOR DE TARJETAS EN CATALOGO*/
+  #catalog{
+    margin-bottom: 265px;
+  }
+
+  #catalog-container #catalog .catalog-card h3
+  {
+    line-height: 80px;
+  }
+
   /*PIE DE PAGINA DE LA PAGINA PRINCIPAL*/
   footer{
     position: relative;
@@ -1442,7 +1473,6 @@ footer p{
     height: auto;
     margin-bottom: 100px;
   }
-
 
   /*CLASE DEL SLIDER HOME*/
  .slide{
@@ -1570,6 +1600,20 @@ footer p{
   /*DIV CONTENEDOR DEL MAPA DENTRO DEL SLIDE*/
   .slide6 .map{
     height: 400px;
+  }
+
+  /*CONTENEDOR DE TARJETAS EN CATALOGO*/
+  #catalog{
+    margin-bottom: 365px;
+  }
+
+  #catalog-container #catalog .catalog-card{
+    width: 75%;
+    height: auto; 
+  }
+
+  #catalog-container #catalog .catalog-card img {
+    height: 385px;
   }
 
   /*PIE DE PAGINA DE LA PAGINA PRINCIPAL*/
@@ -2011,24 +2055,70 @@ footer p{
     height: 600px;
   }
 
-   /*PIE DE PAGINA*/
-   footer
-   {
-     height: 300px;
-     text-align: center;
-     display: grid;
-     grid-template-columns: 1fr 1fr 1fr;
-     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr  ;
-     top: -268px;
-   }
-   
-   footer .iconos{
-     width: 57px;
-     height: 47px;
-     position: relative;
-   }
+  /*TAMAÑO ESTANDAR DEL CATALOGO PARA SOLUCIONAR BUG DE TAMAÑO*/
+  #catalog-body{
+    height: 3670px;
+  }
 
-   footer .iconos img{
+  /*CATALOGO LOGO*/
+  #logo-catalog{
+    display: none;
+  }
+
+  #catalog-container h2{
+    font-size: 35px;
+    top: 150px;
+  }
+
+  #catalog {
+    flex-direction:inherit;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 465px;
+  }
+
+  #catalog-container #catalog .catalog-card{
+    width: calc(33.3% - 20px);
+    height: auto;
+  }
+  
+  #catalog-container #catalog .catalog-card h3{
+    font-size: 22px;
+  }
+
+  /*CENTRAR LOS TITULOS DE LAS TARJETAS QUE NO OCUPAN 2 LINEAS EN EL CATALOGO*/
+  #catalog-container #catalog .catalog-card:nth-child(2) h3, 
+  #catalog-container #catalog .catalog-card:nth-child(3) h3, 
+  #catalog-container #catalog .catalog-card:nth-child(5) h3, 
+  #catalog-container #catalog .catalog-card:nth-child(6) h3,
+  #catalog-container #catalog .catalog-card:nth-child(7) h3, 
+  #catalog-container #catalog .catalog-card:nth-child(8) h3, 
+  #catalog-container #catalog .catalog-card:nth-child(9) h3,
+  #catalog-container #catalog .catalog-card:nth-child(11) h3,
+  #catalog-container #catalog .catalog-card:nth-child(12) h3,
+  #catalog-container #catalog .catalog-card:nth-child(13) h3,
+  #catalog-container #catalog .catalog-card:nth-child(14) h3,
+  #catalog-container #catalog .catalog-card:nth-child(16) h3,
+  #catalog-container #catalog .catalog-card:nth-child(17) h3,
+  #catalog-container #catalog .catalog-card:nth-child(18) h3 {
+    line-height: 40px;
+  }
+  
+  /*PIE DE PAGINA*/
+  footer
+  {
+    height: 300px;
+    text-align: center;
+    top: -277px;
+  }
+   
+  footer .iconos{
+    width: 57px;
+    height: 47px;
+    position: relative;
+  }
+
+  footer .iconos img{
     width: 100%;
     height: 100%;
   }
@@ -2047,37 +2137,36 @@ footer p{
     margin-top: 0;
   }
 
-   footer h3{
-     grid-column: 1/4;
-     grid-row: 1/2;
-     line-height: 6px;
-     margin-top: 40px;
-   }
+  footer h3{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    line-height: 6px;
+    margin-top: 40px;
+    margin-left: 0px;
+  }
    
-   footer a,footer p{
-     position: relative;
-     grid-column: 2/3;
-     text-decoration: none;
-     color: #000;
-     font-family: Arial;
-     font-size: 20px;
-   }
+  footer a,footer p{
+    position: relative;
+    grid-column: 2/3;
+    text-decoration: none;
+    color: #000;
+    font-family: Arial;
+    font-size: 20px;
+  }
    
    footer a:nth-child(5){
-     grid-row: 4/5;
-
+    grid-row: 4/5;
    }
    
    footer a:nth-child(7){
-     grid-row: 5/6;
+    grid-row: 5/6;
    }
    
    footer p{ 
     grid-column: 1/4;
-     grid-row: 6/7;
-     font-family: 'courgette';
+    grid-row: 6/7;
+    font-family: 'courgette';
    }
-
 }
 
 @media screen and (min-width:1200px) {
@@ -2187,12 +2276,6 @@ footer p{
       margin-top: 6px;
     }
 
-    /*PIE DE PAGINA*/
-    footer
-    {
-      top: -265px;
-    }
-
     /*PROPIEDADES ICONOS DENTRO DEL SLIDE4 PRIMER DIV*/
     .slide4 .info1 i{
       margin-left:22%;
@@ -2249,5 +2332,25 @@ footer p{
       min-width: 60%;
       max-height: 120px;
       min-height: 120px;
+    }   
+    
+    /*CATALOGO*/
+
+    #catalog-container #catalog .catalog-card {
+      width: calc(29.3% - 20px);
+    }
+
+    /*CENTRAR LOS TITULOS DE LAS TARJETAS QUE NO OCUPAN 2 LINEAS EN EL CATALOGO*/
+    #catalog-container #catalog .catalog-card:nth-child(2) h3, 
+    #catalog-container #catalog .catalog-card:nth-child(3) h3, 
+    #catalog-container #catalog .catalog-card:nth-child(11) h3, 
+    #catalog-container #catalog .catalog-card:nth-child(12) h3{
+      line-height: 40px;
+    }
+
+    /*PIE DE PAGINA*/
+    footer
+    {
+      top: -265px;
     }
 }
