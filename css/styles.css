@@ -16,11 +16,6 @@ body{
   background:#ffb5ee;
 }
 
-#aviso_legal p{
-  text-align: justify;
-  margin: 0px 15px 25px 15px;
-}
-
 /*CONTENEDOR MENU EN PC*/
 #contenedor_menu{
   display: none;
@@ -120,7 +115,7 @@ header #menu-full{
 }
 
 /*BOTON PARA APARECER MENU*/
-#showmenu:hover ~ #menucell{
+#showmenu:hover + #menucell{
   display: block;
 }
 
@@ -830,7 +825,6 @@ DENTRO DE CONTENEDOR FULL*/
   }
 }
 
-
 /*PROPIEDADES DE LOS PARRAFOS*/
 .slide4 div p{
   font-size: 1.7em;
@@ -849,120 +843,6 @@ DENTRO DE CONTENEDOR FULL*/
   height: 100%;
 }
 
-
-/*SLIDE DEL FORMULARIO DEL CUAL SUS HIJOS TOMAN EL LARGO*/
-.slide5{
-  width: 100%;
-  height: 400px;
-  position: relative;
-  top: 160px;
-}
-
-/*CONTENEDOR DEL FORMULARIO CON TITULO*/
-.slide5 #contact_form{
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-/*CONTENDOR DEL TITULO*/
-.slide5 #contact_form .contact{
-  background:#6bb0f9;
-  width: 100%;
-  height: 80px;
-  text-align: center;
-}
-
-.slide5 #contact_form .contact p{
-  font-size: 3.5em;
-  line-height: 80px;
-  font-weight: lighter;
-}
-
-/*FORMULARIO DE CONTACTO*/
-.slide5 #contact_form form{
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-size: 1.3em;
-}
-
-/*CAMPOS PARA INGRESAR TEXTO*/
-.slide5 #contact_form form input{
-  width: 90%;
-  height: 40px;
-  margin:10px 0px;
-  border-radius: 5px;
-  border: none;
-}
-
-/*BOTON DE ENVIAR*/
-.slide5 #contact_form form #button{
-  font-size: 1.3em;
-  width: 60%;
-  height: 40px;
-  cursor: pointer;
-  animation: 2.5s salto infinite;
-
-}
-
-@keyframes salto {
-  0%,25%,75%{
-    background: #000;
-    color: #ffabf9;
-  }
-  50%,100%{
-    color: #000;
-    background: #fff;
-  }
-}
-
-/*AREA DE TEXTO PARA EL MENSAJE*/
-.slide5 #contact_form form textarea{
-  max-width: 90%;
-  max-height: 100px;
-  min-width: 90%;
-  min-height: 100px;
-  margin:10px 0px 30px 0px;
-  border-radius: 5px;
-  border: none;
-}
-
-
-/*SLIDE CONTENEDOR DEL MAPA*/
-.slide6{
-  width: 100%;
-  height: 500px;
-  position: relative;
-  top: 240px;
-}
-
-/*DIV CONTENEDOR DEL TITULO*/
-.slide6 div{
-  width: 100%;
-  height: 80px;
-  background: #6bb0f9;
-}
-
-/*PROPIEDADES PARA EL TITULO*/
-.slide6 div p{
-  text-align: center;
-  font-size: 3.5em;
-  font-weight: lighter;
-  line-height: 80px;
-}
-
-/*DIV CONTENEDOR DEL MAPA DENTRO DEL SLIDE*/
-.slide6 .map{
-  width: 100%;
-  height: 500px;
-}
-
-/*IFRAME CONTENEDOR DEL MAPA DENTRO DEL DIV Y SLIDE*/
-.slide6 .map iframe{
-  width: 100%;
-  height: 100%;
-}
 
 /*CATALOGO DE PRODUCTOS*/
 
@@ -1009,6 +889,7 @@ DENTRO DE CONTENEDOR FULL*/
   margin: 0 0 60px 0;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
   transition: transform 0.5s, box-shadow 0.5s;
+  border-radius: 5px;
 }
 
 .catalog-card:hover {
@@ -1024,6 +905,7 @@ DENTRO DE CONTENEDOR FULL*/
   background-color: #CEF3FF;
   margin-top: -5px;
   line-height: 40px;
+  border-radius: 5px;
 }
 
 /*CENTRAR LOS TITULOS DE LAS TARJETAS QUE NO OCUPAN 2 LINEAS EN EL CATALOGO*/
@@ -1043,8 +925,143 @@ DENTRO DE CONTENEDOR FULL*/
 #catalog-container #catalog .catalog-card img{
   width: 100%;
   height: 260px;
+  border-radius: 5px;
 }
 
+/*CONTACTO ESTILOS*/
+/*TITULOS*/
+#main-contact-container h3{
+  font-size: 1.6em;
+  line-height: 80px;
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 0;
+}
+
+/*SLIDE DEL FORMULARIO*/
+#contact-form-container{
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+/*CONTENEDOR DEL FORMULARIO CON TITULO*/
+#contact-form-container #contact_form{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/*CONTENDOR DEL TITULO*/
+#contact-form-container #contact_form div{
+  background:#6bb0f9;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+}
+
+
+/*FORMULARIO DE CONTACTO*/
+#contact-form-container #contact_form form{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+/*CAMPOS PARA INGRESAR TEXTO*/
+#contact-form-container #contact_form form input{
+  width: 90%;
+  height: 40px;
+  margin:10px 0px;
+  border-radius: 5px;
+  border: none;
+}
+
+/*BOTON DE ENVIAR*/
+#contact-form-container #contact_form form #button{
+  font-size: 1.2em;
+  width: 60%;
+  height: 55px;
+  cursor: pointer;
+  animation: 2.5s salto infinite;
+
+}
+
+@keyframes salto {
+  0%,25%,75%{
+    background: #000;
+    color: #ffabf9;
+  }
+  50%,100%{
+    color: #000;
+    background: #fff;
+  }
+}
+
+/*AREA DE TEXTO PARA EL MENSAJE*/
+#contact-form-container #contact_form form textarea{
+  max-width: 90%;
+  max-height: 100px;
+  min-width: 90%;
+  min-height: 100px;
+  margin:10px 0px 30px 0px;
+  border-radius: 5px;
+  border: none;
+}
+
+/*SLIDER CONTENEDOR DEL MAPA*/
+#map-container{
+  width: 100%;
+  height: 582px;
+  position: relative;
+  top: 110px;
+  margin-bottom: 24px;
+  border-bottom: #000 2px solid;
+}
+
+/*DIV CONTENEDOR DEL TITULO*/
+#map-container div{
+  width: 100%;
+  height: 80px;
+  background: #6bb0f9;
+}
+
+/*PROPIEDADES PARA EL TITULO
+#map-container div p{
+  text-align: center;
+  font-size: 3.5em;
+  font-weight: lighter;
+  line-height: 80px;
+}*/
+
+/*DIV CONTENEDOR DEL MAPA DENTRO DEL SLIDE*/
+#map-container .map{
+  width: 100%;
+  height: 500px;
+}
+
+/*IFRAME CONTENEDOR DEL MAPA DENTRO DEL DIV Y SLIDE*/
+#map-container .map iframe{
+  width: 100%;
+  height: 100%;
+}
+
+/*AVISO LEGAL*/
+#aviso-legal-body{
+  height: 4200px;
+}
+
+#aviso-legal-container{
+  border-bottom: #000 2px solid;
+  margin-bottom: 170px;
+}
+
+#aviso-legal-container p{
+  text-align: justify;
+  font-size: 1em;
+  margin: 0px 15px 25px 15px;
+}
 
 /*PIE DE PAGINA DE LA PAGINA PRINCIPAL*/
 footer{
@@ -1413,24 +1430,6 @@ footer p{
     height: 350px;
   }
 
-  /*SLIDE DEL FORMULARIO DEL CUAL SUS HIJOS TOMAN EL LARGO*/
-  .slide5{
-    position: relative;
-    top: -70px;
-  }
-
-  /*SLIDE CONTENEDOR DEL MAPA*/
-  .slide6{
-    height: 350px;
-    position: relative;
-    top: 10px;
-  }
-
-  /*DIV CONTENEDOR DEL MAPA DENTRO DEL SLIDE*/
-  .slide6 .map{
-    height: 350px;
-  }
-
   /*CATALOGO*/
   /*TAMAÑO ESTANDAR DEL CATALOGO PARA SOLUCIONAR BUG DE TAMAÑO*/
   #catalog-body{
@@ -1445,6 +1444,29 @@ footer p{
   #catalog-container #catalog .catalog-card h3
   {
     line-height: 80px;
+  }
+
+
+  /*CONTACTO*/
+  #contact-body{
+    height: 1435px;
+  }
+  /*SLIDE CONTENEDOR DEL MAPA*/
+  #map-container{
+    height: auto;
+    margin-bottom: 178px;
+  }
+
+  /*DIV CONTENEDOR DEL MAPA DENTRO DEL SLIDE*/
+  #map-container .map{
+    height: 550px;
+  }
+
+
+  /*AVISO LEGAL*/
+  /*CAMBIO DE LETRA*/
+  #aviso-legal-container p{
+    font-size: 2em;
   }
 
   /*PIE DE PAGINA DE LA PAGINA PRINCIPAL*/
@@ -1584,24 +1606,6 @@ footer p{
     height: 400px;
   }
 
-  /*SLIDE DEL FORMULARIO DEL CUAL SUS HIJOS TOMAN EL LARGO*/
-  .slide5{
-    position: relative;
-    top: -150px;
-  }
-
-  /*SLIDE CONTENEDOR DEL MAPA*/
-  .slide6{
-    height: 400px;
-    position: relative;
-    top: -70px;
-  }
-
-  /*DIV CONTENEDOR DEL MAPA DENTRO DEL SLIDE*/
-  .slide6 .map{
-    height: 400px;
-  }
-
   /*CONTENEDOR DE TARJETAS EN CATALOGO*/
   #catalog{
     margin-bottom: 365px;
@@ -1614,6 +1618,22 @@ footer p{
 
   #catalog-container #catalog .catalog-card img {
     height: 385px;
+  }
+
+  /*CONTACTO*/
+  #map-container {
+    margin-bottom: 270px;
+  }
+
+  /*DIV CONTENEDOR DEL MAPA DENTRO DEL SLIDE*/
+  #map-container .map{
+    height: 560px;
+  }
+
+  /*TITULOS DE CONTACTO*/
+  #main-contact-container h3{
+    font-size: 1.7em;
+    line-height: 85px;
   }
 
   /*PIE DE PAGINA DE LA PAGINA PRINCIPAL*/
@@ -2011,50 +2031,6 @@ footer p{
     margin-top: -900px;
   }
 
-  /*SLIDE DEL FORMULARIO DEL CUAL SUS HIJOS TOMAN EL LARGO*/
-  .slide5{
-    position: relative;
-    top: -265px;
-    height: 410px;
-  }
-
-  /*CAMPOS PARA INGRESAR TEXTO*/
-  .slide5 #contact_form form input{
-    width: 80%;
-  }
-
-  /*BOTON DE ENVIAR*/
-  .slide5 #contact_form form #button{
-    font-size: 1.5em;
-    width: 35%;
-    height: 55px;
-    transition-duration: 0.3s;
-    animation: none;
-  }
-
-  /*AREA DE TEXTO PARA EL MENSAJE*/
-  .slide5 #contact_form form textarea{
-    max-width: 80%;
-    min-width: 80%;
-  }
-
-  .slide5 #contact_form form #button:hover{
-    background: #000000;
-    color: #ebc6ff;
-  }
-
-  /*SLIDE CONTENEDOR DEL MAPA*/
-  .slide6{
-    height: 600px;
-    position: relative;
-    top: -185px;
-  }
-
-  /*DIV CONTENEDOR DEL MAPA DENTRO DEL SLIDE*/
-  .slide6 .map{
-    height: 600px;
-  }
-
   /*TAMAÑO ESTANDAR DEL CATALOGO PARA SOLUCIONAR BUG DE TAMAÑO*/
   #catalog-body{
     height: 3670px;
@@ -2104,6 +2080,64 @@ footer p{
     line-height: 40px;
   }
   
+  /*CONTACTO*/
+
+  /*TITULOS DEL CONTACTO*/
+  #main-contact-container h3{
+    font-size: 1.9em;
+  }
+
+  /*SLIDE DEL FORMULARIO DEL CUAL SUS HIJOS TOMAN EL LARGO*/
+  #contact-form-container{
+    position: relative;
+    top: 100px;
+  }
+
+  /*CAMPOS PARA INGRESAR TEXTO*/
+  #contact-form-container #contact_form form input{
+    width: 80%;
+  }
+
+  /*BOTON DE ENVIAR*/
+  #contact-form-container #contact_form form #button{
+    font-size: 1.5em;
+    width: 35%;
+    height: 55px;
+    transition-duration: 0.3s;
+    animation: none;
+  }
+
+  /*AREA DE TEXTO PARA EL MENSAJE*/
+  #contact-form-container #contact_form form textarea{
+    max-width: 80%;
+    min-width: 80%;
+  }
+
+  #contact-form-container #contact_form form #button:hover{
+    background: #000000;
+    color: #ebc6ff;
+  }
+
+  /*SLIDE CONTENEDOR DEL MAPA*/
+  #map-container{
+    position: relative;
+    top: 210px;
+  }
+
+  /*DIV CONTENEDOR DEL MAPA DENTRO DEL SLIDE*/
+  #map-container .map{
+    height: 630px;
+  }
+
+  #map-container {
+    margin-bottom: 480px;
+  }
+
+  /*AVISO LEGAL*/
+  #aviso-legal-container {
+    margin-bottom: 270px;
+  }
+
   /*PIE DE PAGINA*/
   footer
   {
@@ -2309,31 +2343,7 @@ footer p{
       height: 1000px;
       margin-top: -900px;
     }
-    /*SLIDE DEL FORMULARIO DEL CUAL SUS HIJOS TOMAN EL LARGO*/
-    .slide5{
-      height: 420px;
-    }
 
-    /*CAMPOS PARA INGRESAR TEXTO*/
-    .slide5 #contact_form form input{
-      width: 60%;
-    }
-
-    /*BOTON DE ENVIAR*/
-    .slide5 #contact_form form #button{
-      font-size: 1.7em;
-      width: 30%;
-      margin: 0px 5%;
-    }
-
-    /*AREA DE TEXTO PARA EL MENSAJE*/
-    .slide5 #contact_form form textarea{
-      max-width: 60%;
-      min-width: 60%;
-      max-height: 120px;
-      min-height: 120px;
-    }   
-    
     /*CATALOGO*/
 
     #catalog-container #catalog .catalog-card {
@@ -2347,6 +2357,37 @@ footer p{
     #catalog-container #catalog .catalog-card:nth-child(12) h3{
       line-height: 40px;
     }
+
+    /*CONTACTO*/
+    /*TITULOS DEL FORMULARIO*/
+    #main-contact-container h3 {
+      font-size: 2em;
+    }
+
+    /*SLIDE DEL FORMULARIO DEL CUAL SUS HIJOS TOMAN EL LARGO*/
+    #contact-form-container{
+      height: 420px;
+    }
+
+    /*CAMPOS PARA INGRESAR TEXTO*/
+    #contact-form-container #contact_form form input{
+      width: 60%;
+    }
+
+    /*BOTON DE ENVIAR*/
+    #contact-form-container #contact_form form #button{
+      font-size: 1.3em;
+      width: 30%;
+      margin: 0px 5%;
+    }
+
+    /*AREA DE TEXTO PARA EL MENSAJE*/
+    #contact-form-container #contact_form form textarea{
+      max-width: 60%;
+      min-width: 60%;
+      max-height: 120px;
+      min-height: 120px;
+    }   
 
     /*PIE DE PAGINA*/
     footer
