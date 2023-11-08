@@ -18,6 +18,13 @@
   </head>
   <body>
     <div id="contenedor_full">
+
+    <!--BOTON PARA CAMBIAR IDIOMA-->
+    <button id="language-button"><a href="index-english.html">EN</a></button>
+    
+
+  
+
     <header id="contenedor_menu">
       <nav id="menu">
           <ul>
@@ -39,16 +46,20 @@
       </nav>
     </header>
 
-    <!--BOTON PARA CAMBIAR IDIOMA-->
-    <button id="language-button"><a href="index-english.html">EN</a></button>
 
-    <!--MENU MOVIL-->
+
+    
     <!--BOTON PARA ABRIR Y CERRAR MENU-->
-    <figure id="showmenu" class="iomenumovil">
-      <img src="iconos/iconos png/menu.png" alt="menu">
-    </figure>
-
-    <header id="menucell">
+    <label for="checkbox">
+      <figure id="showmenu" class="iomenumovil">
+        <img src="iconos/iconos png/menu.png" alt="menu">
+      </figure>
+    </label>
+    <input type="checkbox" id="checkbox">
+    <!-- MENU MOVIL -->
+    <!--MENU MOVIL-->        
+    
+    <header id="menucell" class="menucell">
       <nav id="iomenu">
         <h1>SUBLIME CREATIVOS</h1>
           <ul>
@@ -57,7 +68,8 @@
             <li><a href="pages/catalog.html">CATALOGO</a></li>
             <li><a href="pages/testimonials.html">TESTIMONIOS</a></li>
 
-           <!-- MENU MOVIL DESPLEGABLE -->
+           
+            <!-- MENU MOVIL DESPLEGABLE -->
             <li id="sub-menu-movil">
               <a href="#">NOSOTROS</a>
               <ul>
@@ -67,9 +79,7 @@
             </li>
           </ul>
       </nav>
-
     </header>
-
     <!-- LOGO INICIAL -->
     <figure id="logo">
       <img src="img/logo.png" alt="sublime creativos">

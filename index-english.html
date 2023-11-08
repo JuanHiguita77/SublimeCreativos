@@ -17,7 +17,10 @@
     <title>Stampings medellin|Sublimecreativos</title>
   </head>
   <body>
+
     <div id="contenedor_full">
+          <!--BOTON PARA CAMBIAR IDIOMA-->
+    <button id="language-button"><a href="index.html">ES</a></button>
     <header id="contenedor_menu">
       <nav id="menu">
           <ul>
@@ -39,13 +42,17 @@
       </nav>
     </header>
 
-  <!--MOBILE MENU-->
-  <!--BUTTON TO OPEN AND CLOSE MENU-->
-    <figure id="showmenu" class="iomenumovil">
-      <img src="iconos/iconos png/menu.png" alt="menu">
-    </figure>
+    <!--MOBILE MENU-->
+    <!--BUTTON TO OPEN AND CLOSE MENU-->
 
-    <header id="menucell">
+    <label for="checkbox">
+      <figure id="showmenu" class="iomenumovil">
+        <img src="iconos/iconos png/menu.png" alt="menu">
+      </figure>
+    </label>
+    <input type="checkbox" id="checkbox">
+
+    <header id="menucell" class="menucell">
       <nav id="iomenu">
         <h1>SUBLIME CREATIVOS</h1>
           <ul>
@@ -67,8 +74,7 @@
 
     </header>
 
-    <!--BOTON PARA CAMBIAR IDIOMA-->
-    <button id="language-button"><a href="index.html">ES</a></button>
+
 
     <!-- INITIAL LOGO -->
     <figure id="logo">
